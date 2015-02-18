@@ -1,19 +1,21 @@
 from rest_framework import serializers
 from apps.illuminaapi.models import Run,Illumina,Analyze
 
-class RunSerializer(serializers.ModelSerializer):
+class RunSerializer(serializers.HyperlinkedModelSerializer):
+	analyzes = serializers.HyperlinkedRelatedField(many=True,read_only=True,view_name='analyze-detail')
 	class Meta:
 		model = Run
-		fields = ('id','name','illumina_id','date','isFinished')
+		fields = ('id','name','illumina_id','date','isFinished','analyzes')
 
 class IlluminaSerializer(serializers.ModelSerializer):
+	runs = serializers.HyperlinkedRelatedField(many=True,read_only=True,view_name='run-detail')
 	class Meta:
 		model = Illumina
-		fields = ('id','name','date')
+		fields = ('id','name','date','runs')
 
-class AnalyzeSerializer(serializers.ModelSerializer):
+class AnalyzeSerializer(serializers.HyperlinkedModelSerializer):
 	class Meta:
-		moel = Analyze
-		fields = ('id','name','run_id','csv','isFinished','url')
+		model = Analyze
+		fields = ('id','name','run_id','csv','url','isFinished')
 
 
