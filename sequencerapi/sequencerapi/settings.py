@@ -42,6 +42,7 @@ INSTALLED_APPS = (
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -53,6 +54,8 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'sequencerapi.urls'
 
 WSGI_APPLICATION = 'sequencerapi.wsgi.application'
+
+CORS_ORIGIN_ALLOW_ALL = True
 
 
 # Database
