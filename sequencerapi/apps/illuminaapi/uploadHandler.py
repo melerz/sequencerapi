@@ -15,7 +15,7 @@ import re
 import urllib
 
 
-WEBSITE = 'http://10.100.102.150:8080/'
+WEBSITE = 'http://10.100.102.150:8081/'
 MIN_FILE_SIZE = 1  # bytes
 MAX_FILE_SIZE = 5000000  # bytes
 IMAGE_TYPES = re.compile('image/(gif|p?jpeg|(x-)?png)')
