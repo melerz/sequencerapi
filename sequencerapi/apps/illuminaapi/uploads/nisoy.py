@@ -1,4 +1,5 @@
 import subprocess
+import json
 def extractCsv_information(path):
 
 	#Reads#
@@ -27,8 +28,13 @@ def extractCsv_information(path):
 	reads = [read for read in out_reads.split("\n") if read]
 	indexes = [index for index in out_indexes.split("\n") if index]
 
+	hash={}
+	hash['reads']=reads
+	hash['indexes']=indexes
 	print reads
 	print (indexes)
+	hash = json.dumps(hash)
+	print hash
 
 
 extractCsv_information("/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/uploads/michal-80.csv")

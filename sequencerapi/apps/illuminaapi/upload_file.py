@@ -1,9 +1,14 @@
 from django.core.files.storage import default_storage
+from django.conf import settings
 import json
 import subprocess
+import os
+
 def handle_upload_file(f):
 	#file is UploadedFile object
-	path=default_storage.save(f.name, f)
+	default_storage.save(f.name, f)
+	path = os.path.join(settings.MEDIA_ROOT,f.name)
+	
 	res = []
 	configuration = extractCsv_information(path)	
 	result = {}
@@ -11,6 +16,7 @@ def handle_upload_file(f):
 	result['type'] = f.content_type
 	result['size'] = f.size
 	result['url'] = "http://kernel"
+	result['configuration'] = configuration
 
 	res.append(result)
 	return res
@@ -43,3 +49,9 @@ def extractCsv_information(path):
 	out_reads=out_reads.replace('\r', '') #it appears the cmd_reads return '\r' in output
 	reads = [read for read in out_reads.split("\n") if read]
 	indexes = [index for index in out_indexes.split("\n") if index]
+
+	conf_hash={}
+
+	conf_hash['reads']=reads
+	conf_hash['indexes'] = indexes
+	return conf_hash

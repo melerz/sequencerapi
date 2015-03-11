@@ -39,7 +39,6 @@ def upload_post(request):
 
 	output = {'files':result}
 	res_json = json.dumps(output)
-	#if 'application/json' in request.META['HTTP_ACCEPT_ENCODING']:
 	response['Content-Type'] = 'application/json'
 	response.write(res_json)
 

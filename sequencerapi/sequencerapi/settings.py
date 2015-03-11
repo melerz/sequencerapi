@@ -91,3 +91,6 @@ STATIC_URL = '/static/'
 # FILE UPLOAD
 MEDIA_ROOT='/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/uploads/'
 #
+
+#HOSTNAME
+HOSTNAME="132.65.120.206"
