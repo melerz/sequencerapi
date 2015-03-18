@@ -1,0 +1,279 @@
+2015-03-18 17:51:29,142 - fastq - ERROR - 'str' object has no attribute 'name'
+Traceback (most recent call last):
+  File "createfastq.py", line 21, in run
+    logger.info(("Currently experiment:{0}".format(data.name)))
+AttributeError: 'str' object has no attribute 'name'
+2015-03-18 17:52:15,309 - fastq - ERROR - 'dict' object has no attribute 'name'
+Traceback (most recent call last):
+  File "createfastq.py", line 21, in run
+    logger.info(("Currently experiment:{0}".format(data.name)))
+AttributeError: 'dict' object has no attribute 'name'
+2015-03-18 17:52:15,309 - fastq - ERROR - 'dict' object has no attribute 'name'
+Traceback (most recent call last):
+  File "createfastq.py", line 21, in run
+    logger.info(("Currently experiment:{0}".format(data.name)))
+AttributeError: 'dict' object has no attribute 'name'
+2015-03-18 17:54:33,609 - fastq - ERROR - 'dict' object has no attribute 'name'
+Traceback (most recent call last):
+  File "createfastq.py", line 21, in run
+    logger.info(("Currently experiment:{0}".format(data['name'])))
+AttributeError: 'dict' object has no attribute 'name'
+2015-03-18 17:54:33,609 - fastq - ERROR - 'dict' object has no attribute 'name'
+Traceback (most recent call last):
+  File "createfastq.py", line 21, in run
+    logger.info(("Currently experiment:{0}".format(data['name'])))
+AttributeError: 'dict' object has no attribute 'name'
+2015-03-18 17:54:33,609 - fastq - ERROR - 'dict' object has no attribute 'name'
+Traceback (most recent call last):
+  File "createfastq.py", line 21, in run
+    logger.info(("Currently experiment:{0}".format(data['name'])))
+AttributeError: 'dict' object has no attribute 'name'
+2015-03-18 17:56:59,945 - fastq - ERROR - 'str' object has no attribute 'name'
+Traceback (most recent call last):
+  File "createfastq.py", line 21, in run
+    logger.info(("Currently experiment:{0}".format(data['name'])))
+AttributeError: 'str' object has no attribute 'name'
+2015-03-18 17:56:59,945 - fastq - ERROR - 'str' object has no attribute 'name'
+Traceback (most recent call last):
+  File "createfastq.py", line 21, in run
+    logger.info(("Currently experiment:{0}".format(data['name'])))
+AttributeError: 'str' object has no attribute 'name'
+2015-03-18 17:56:59,945 - fastq - ERROR - 'str' object has no attribute 'name'
+Traceback (most recent call last):
+  File "createfastq.py", line 21, in run
+    logger.info(("Currently experiment:{0}".format(data['name'])))
+AttributeError: 'str' object has no attribute 'name'
+2015-03-18 17:56:59,945 - fastq - ERROR - 'str' object has no attribute 'name'
+Traceback (most recent call last):
+  File "createfastq.py", line 21, in run
+    logger.info(("Currently experiment:{0}".format(data['name'])))
+AttributeError: 'str' object has no attribute 'name'
+2015-03-18 17:57:09,155 - fastq - ERROR - 'dict' object has no attribute 'name'
+Traceback (most recent call last):
+  File "createfastq.py", line 21, in run
+    logger.info(("Currently experiment:{0}".format(data['name'])))
+AttributeError: 'dict' object has no attribute 'name'
+2015-03-18 17:57:09,155 - fastq - ERROR - 'dict' object has no attribute 'name'
+Traceback (most recent call last):
+  File "createfastq.py", line 21, in run
+    logger.info(("Currently experiment:{0}".format(data['name'])))
+AttributeError: 'dict' object has no attribute 'name'
+2015-03-18 17:57:09,155 - fastq - ERROR - 'dict' object has no attribute 'name'
+Traceback (most recent call last):
+  File "createfastq.py", line 21, in run
+    logger.info(("Currently experiment:{0}".format(data['name'])))
+AttributeError: 'dict' object has no attribute 'name'
+2015-03-18 17:57:09,155 - fastq - ERROR - 'dict' object has no attribute 'name'
+Traceback (most recent call last):
+  File "createfastq.py", line 21, in run
+    logger.info(("Currently experiment:{0}".format(data['name'])))
+AttributeError: 'dict' object has no attribute 'name'
+2015-03-18 17:57:09,155 - fastq - ERROR - 'dict' object has no attribute 'name'
+Traceback (most recent call last):
+  File "createfastq.py", line 21, in run
+    logger.info(("Currently experiment:{0}".format(data['name'])))
+AttributeError: 'dict' object has no attribute 'name'
+2015-03-18 17:58:23,699 - fastq - INFO - Currently experiment:michal-79
+2015-03-18 17:58:23,699 - fastq - INFO - michal-79: Init Directory
+2015-03-18 17:58:23,704 - fastq - ERROR - Exception in createRundir : global name 'WEBSITE_PATH' is not defined
+Traceback (most recent call last):
+  File "createfastq.py", line 28, in run
+  File "createfastq_operations.py", line 38, in createRundir
+Exception: Exception in createRundir : global name 'WEBSITE_PATH' is not defined
+2015-03-18 18:04:36,594 - fastq - INFO - Currently experiment:michal-79
+2015-03-18 18:04:36,595 - fastq - INFO - michal-79: Init Directory
+2015-03-18 18:04:36,595 - fastq - ERROR - Exception in createRundir : global name 'WEBSITE_PATH' is not defined
+Traceback (most recent call last):
+  File "createfastq.py", line 28, in run
+  File "createfastq_operations.py", line 38, in createRundir
+Exception: Exception in createRundir : global name 'WEBSITE_PATH' is not defined
+2015-03-18 18:05:08,745 - fastq - INFO - Currently experiment:michal-79
+2015-03-18 18:05:08,746 - fastq - INFO - michal-79: Init Directory
+2015-03-18 18:05:08,747 - fastq - ERROR - Exception in createRundir : global name 'WEBSITE_PATH' is not defined
+Traceback (most recent call last):
+  File "createfastq.py", line 28, in run
+  File "createfastq_operations.py", line 38, in createRundir
+Exception: Exception in createRundir : global name 'WEBSITE_PATH' is not defined
+2015-03-18 18:06:09,082 - fastq - INFO - Currently experiment:michal-79
+2015-03-18 18:06:09,082 - fastq - INFO - michal-79: Init Directory
+2015-03-18 18:06:09,083 - fastq - ERROR - Exception in createRundir : 'illumina_name'
+Traceback (most recent call last):
+  File "createfastq.py", line 28, in run
+  File "createfastq_operations.py", line 39, in createRundir
+Exception: Exception in createRundir : 'illumina_name'
+2015-03-18 18:07:22,955 - fastq - INFO - Currently experiment:michal-79
+2015-03-18 18:07:22,955 - fastq - INFO - Currently experiment:michal-79
+2015-03-18 18:07:22,956 - fastq - INFO - michal-79: Init Directory
+2015-03-18 18:07:22,956 - fastq - INFO - michal-79: Init Directory
+2015-03-18 18:07:22,979 - fastq - INFO - michal-79: Run bcl2fastq
+2015-03-18 18:07:22,979 - fastq - INFO - michal-79: Run bcl2fastq
+2015-03-18 18:07:22,980 - fastq - ERROR - Exception in runExpirement : Exception in cleanXML : [Errno 2] No such file or directory: './RunInfo.xml'
+Traceback (most recent call last):
+  File "createfastq.py", line 33, in run
+  File "createfastq_operations.py", line 67, in runExpirement
+Exception: Exception in runExpirement : Exception in cleanXML : [Errno 2] No such file or directory: './RunInfo.xml'
+2015-03-18 18:07:22,980 - fastq - ERROR - Exception in runExpirement : Exception in cleanXML : [Errno 2] No such file or directory: './RunInfo.xml'
+Traceback (most recent call last):
+  File "createfastq.py", line 33, in run
+  File "createfastq_operations.py", line 67, in runExpirement
+Exception: Exception in runExpirement : Exception in cleanXML : [Errno 2] No such file or directory: './RunInfo.xml'
+2015-03-18 18:08:50,470 - fastq - INFO - Currently experiment:michal-79
+2015-03-18 18:08:50,470 - fastq - INFO - Currently experiment:michal-79
+2015-03-18 18:08:50,474 - fastq - INFO - michal-79: Init Directory
+2015-03-18 18:08:50,474 - fastq - INFO - michal-79: Init Directory
+2015-03-18 18:08:50,511 - fastq - INFO - michal-79: Run bcl2fastq
+2015-03-18 18:08:50,511 - fastq - INFO - michal-79: Run bcl2fastq
+2015-03-18 18:08:50,512 - fastq - ERROR - Exception in runExpirement : Exception in cleanXML : [Errno 2] No such file or directory: './RunInfo.xml'
+Traceback (most recent call last):
+  File "createfastq.py", line 33, in run
+  File "createfastq_operations.py", line 67, in runExpirement
+Exception: Exception in runExpirement : Exception in cleanXML : [Errno 2] No such file or directory: './RunInfo.xml'
+2015-03-18 18:08:50,512 - fastq - ERROR - Exception in runExpirement : Exception in cleanXML : [Errno 2] No such file or directory: './RunInfo.xml'
+Traceback (most recent call last):
+  File "createfastq.py", line 33, in run
+  File "createfastq_operations.py", line 67, in runExpirement
+Exception: Exception in runExpirement : Exception in cleanXML : [Errno 2] No such file or directory: './RunInfo.xml'
+2015-03-18 18:09:34,544 - fastq - INFO - Currently experiment:michal-79
+2015-03-18 18:09:34,545 - fastq - INFO - michal-79: Init Directory
+2015-03-18 18:09:34,571 - fastq - INFO - michal-79: Run bcl2fastq
+2015-03-18 18:09:34,571 - fastq - ERROR - Exception in runExpirement : Exception in cleanXML : [Errno 2] No such file or directory: './RunInfo.xml'
+Traceback (most recent call last):
+  File "createfastq.py", line 33, in run
+  File "createfastq_operations.py", line 67, in runExpirement
+Exception: Exception in runExpirement : Exception in cleanXML : [Errno 2] No such file or directory: './RunInfo.xml'
+2015-03-18 18:12:39,422 - fastq - INFO - Currently experiment:michal-79
+2015-03-18 18:12:39,422 - fastq - INFO - Currently experiment:michal-79
+2015-03-18 18:12:39,427 - fastq - INFO - michal-79: Init Directory
+2015-03-18 18:12:39,427 - fastq - INFO - michal-79: Init Directory
+2015-03-18 18:12:39,453 - fastq - INFO - michal-79: Run bcl2fastq
+2015-03-18 18:12:39,453 - fastq - INFO - michal-79: Run bcl2fastq
+2015-03-18 18:12:39,513 - fastq - ERROR - Exception in runExpirement : Exception in configureXML : string indices must be integers, not str
+Traceback (most recent call last):
+  File "createfastq.py", line 33, in run
+  File "createfastq_operations.py", line 67, in runExpirement
+Exception: Exception in runExpirement : Exception in configureXML : string indices must be integers, not str
+2015-03-18 18:12:39,513 - fastq - ERROR - Exception in runExpirement : Exception in configureXML : string indices must be integers, not str
+Traceback (most recent call last):
+  File "createfastq.py", line 33, in run
+  File "createfastq_operations.py", line 67, in runExpirement
+Exception: Exception in runExpirement : Exception in configureXML : string indices must be integers, not str
+2015-03-18 18:15:22,028 - fastq - INFO - Currently experiment:michal-79
+2015-03-18 18:15:22,028 - fastq - INFO - Currently experiment:michal-79
+2015-03-18 18:15:22,028 - fastq - INFO - Currently experiment:michal-79
+2015-03-18 18:15:22,028 - fastq - INFO - michal-79: Init Directory
+2015-03-18 18:15:22,028 - fastq - INFO - michal-79: Init Directory
+2015-03-18 18:15:22,028 - fastq - INFO - michal-79: Init Directory
+2015-03-18 18:15:22,041 - fastq - INFO - michal-79: Run bcl2fastq
+2015-03-18 18:15:22,041 - fastq - INFO - michal-79: Run bcl2fastq
+2015-03-18 18:15:22,041 - fastq - INFO - michal-79: Run bcl2fastq
+2015-03-18 18:15:22,087 - fastq - ERROR - Exception in runExpirement : Exception in configureXML : string indices must be integers, not str
+Traceback (most recent call last):
+  File "createfastq.py", line 33, in run
+  File "createfastq_operations.py", line 67, in runExpirement
+Exception: Exception in runExpirement : Exception in configureXML : string indices must be integers, not str
+2015-03-18 18:15:22,087 - fastq - ERROR - Exception in runExpirement : Exception in configureXML : string indices must be integers, not str
+Traceback (most recent call last):
+  File "createfastq.py", line 33, in run
+  File "createfastq_operations.py", line 67, in runExpirement
+Exception: Exception in runExpirement : Exception in configureXML : string indices must be integers, not str
+2015-03-18 18:15:22,087 - fastq - ERROR - Exception in runExpirement : Exception in configureXML : string indices must be integers, not str
+Traceback (most recent call last):
+  File "createfastq.py", line 33, in run
+  File "createfastq_operations.py", line 67, in runExpirement
+Exception: Exception in runExpirement : Exception in configureXML : string indices must be integers, not str
+2015-03-18 18:16:08,999 - fastq - INFO - Currently experiment:michal-79
+2015-03-18 18:16:08,999 - fastq - INFO - Currently experiment:michal-79
+2015-03-18 18:16:08,999 - fastq - INFO - Currently experiment:michal-79
+2015-03-18 18:16:09,003 - fastq - INFO - michal-79: Init Directory
+2015-03-18 18:16:09,003 - fastq - INFO - michal-79: Init Directory
+2015-03-18 18:16:09,003 - fastq - INFO - michal-79: Init Directory
+2015-03-18 18:16:09,027 - fastq - INFO - michal-79: Run bcl2fastq
+2015-03-18 18:16:09,027 - fastq - INFO - michal-79: Run bcl2fastq
+2015-03-18 18:16:09,027 - fastq - INFO - michal-79: Run bcl2fastq
+2015-03-18 18:16:09,132 - fastq - ERROR - Exception in runExpirement : Exception in configureXML : string indices must be integers, not str
+Traceback (most recent call last):
+  File "createfastq.py", line 33, in run
+  File "createfastq_operations.py", line 67, in runExpirement
+Exception: Exception in runExpirement : Exception in configureXML : string indices must be integers, not str
+2015-03-18 18:16:09,132 - fastq - ERROR - Exception in runExpirement : Exception in configureXML : string indices must be integers, not str
+Traceback (most recent call last):
+  File "createfastq.py", line 33, in run
+  File "createfastq_operations.py", line 67, in runExpirement
+Exception: Exception in runExpirement : Exception in configureXML : string indices must be integers, not str
+2015-03-18 18:16:09,132 - fastq - ERROR - Exception in runExpirement : Exception in configureXML : string indices must be integers, not str
+Traceback (most recent call last):
+  File "createfastq.py", line 33, in run
+  File "createfastq_operations.py", line 67, in runExpirement
+Exception: Exception in runExpirement : Exception in configureXML : string indices must be integers, not str
+2015-03-18 18:16:26,526 - fastq - INFO - Currently experiment:michal-79
+2015-03-18 18:16:26,526 - fastq - INFO - Currently experiment:michal-79
+2015-03-18 18:16:26,526 - fastq - INFO - Currently experiment:michal-79
+2015-03-18 18:16:26,526 - fastq - INFO - Currently experiment:michal-79
+2015-03-18 18:16:26,530 - fastq - INFO - michal-79: Init Directory
+2015-03-18 18:16:26,530 - fastq - INFO - michal-79: Init Directory
+2015-03-18 18:16:26,530 - fastq - INFO - michal-79: Init Directory
+2015-03-18 18:16:26,530 - fastq - INFO - michal-79: Init Directory
+2015-03-18 18:16:26,551 - fastq - INFO - michal-79: Run bcl2fastq
+2015-03-18 18:16:26,551 - fastq - INFO - michal-79: Run bcl2fastq
+2015-03-18 18:16:26,551 - fastq - INFO - michal-79: Run bcl2fastq
+2015-03-18 18:16:26,551 - fastq - INFO - michal-79: Run bcl2fastq
+2015-03-18 18:16:26,601 - fastq - ERROR - Exception in runExpirement : Exception in configureXML : string indices must be integers, not str
+Traceback (most recent call last):
+  File "createfastq.py", line 33, in run
+  File "createfastq_operations.py", line 67, in runExpirement
+Exception: Exception in runExpirement : Exception in configureXML : string indices must be integers, not str
+2015-03-18 18:16:26,601 - fastq - ERROR - Exception in runExpirement : Exception in configureXML : string indices must be integers, not str
+Traceback (most recent call last):
+  File "createfastq.py", line 33, in run
+  File "createfastq_operations.py", line 67, in runExpirement
+Exception: Exception in runExpirement : Exception in configureXML : string indices must be integers, not str
+2015-03-18 18:16:26,601 - fastq - ERROR - Exception in runExpirement : Exception in configureXML : string indices must be integers, not str
+Traceback (most recent call last):
+  File "createfastq.py", line 33, in run
+  File "createfastq_operations.py", line 67, in runExpirement
+Exception: Exception in runExpirement : Exception in configureXML : string indices must be integers, not str
+2015-03-18 18:16:26,601 - fastq - ERROR - Exception in runExpirement : Exception in configureXML : string indices must be integers, not str
+Traceback (most recent call last):
+  File "createfastq.py", line 33, in run
+  File "createfastq_operations.py", line 67, in runExpirement
+Exception: Exception in runExpirement : Exception in configureXML : string indices must be integers, not str
+2015-03-18 18:17:36,457 - fastq - INFO - Currently experiment:michal-79
+2015-03-18 18:17:36,457 - fastq - INFO - Currently experiment:michal-79
+2015-03-18 18:17:36,457 - fastq - INFO - Currently experiment:michal-79
+2015-03-18 18:17:36,457 - fastq - INFO - Currently experiment:michal-79
+2015-03-18 18:17:36,457 - fastq - INFO - Currently experiment:michal-79
+2015-03-18 18:17:36,458 - fastq - INFO - michal-79: Init Directory
+2015-03-18 18:17:36,458 - fastq - INFO - michal-79: Init Directory
+2015-03-18 18:17:36,458 - fastq - INFO - michal-79: Init Directory
+2015-03-18 18:17:36,458 - fastq - INFO - michal-79: Init Directory
+2015-03-18 18:17:36,458 - fastq - INFO - michal-79: Init Directory
+2015-03-18 18:17:36,473 - fastq - INFO - michal-79: Run bcl2fastq
+2015-03-18 18:17:36,473 - fastq - INFO - michal-79: Run bcl2fastq
+2015-03-18 18:17:36,473 - fastq - INFO - michal-79: Run bcl2fastq
+2015-03-18 18:17:36,473 - fastq - INFO - michal-79: Run bcl2fastq
+2015-03-18 18:17:36,473 - fastq - INFO - michal-79: Run bcl2fastq
+2015-03-18 18:17:36,535 - fastq - ERROR - Exception in runExpirement : error in createSampleSheet Requested setting MEDIA_ROOT, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+Traceback (most recent call last):
+  File "createfastq.py", line 33, in run
+  File "createfastq_operations.py", line 67, in runExpirement
+Exception: Exception in runExpirement : error in createSampleSheet Requested setting MEDIA_ROOT, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+2015-03-18 18:17:36,535 - fastq - ERROR - Exception in runExpirement : error in createSampleSheet Requested setting MEDIA_ROOT, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+Traceback (most recent call last):
+  File "createfastq.py", line 33, in run
+  File "createfastq_operations.py", line 67, in runExpirement
+Exception: Exception in runExpirement : error in createSampleSheet Requested setting MEDIA_ROOT, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+2015-03-18 18:17:36,535 - fastq - ERROR - Exception in runExpirement : error in createSampleSheet Requested setting MEDIA_ROOT, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+Traceback (most recent call last):
+  File "createfastq.py", line 33, in run
+  File "createfastq_operations.py", line 67, in runExpirement
+Exception: Exception in runExpirement : error in createSampleSheet Requested setting MEDIA_ROOT, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+2015-03-18 18:17:36,535 - fastq - ERROR - Exception in runExpirement : error in createSampleSheet Requested setting MEDIA_ROOT, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+Traceback (most recent call last):
+  File "createfastq.py", line 33, in run
+  File "createfastq_operations.py", line 67, in runExpirement
+Exception: Exception in runExpirement : error in createSampleSheet Requested setting MEDIA_ROOT, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+2015-03-18 18:17:36,535 - fastq - ERROR - Exception in runExpirement : error in createSampleSheet Requested setting MEDIA_ROOT, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+Traceback (most recent call last):
+  File "createfastq.py", line 33, in run
+  File "createfastq_operations.py", line 67, in runExpirement
+Exception: Exception in runExpirement : error in createSampleSheet Requested setting MEDIA_ROOT, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.

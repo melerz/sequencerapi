@@ -6,7 +6,7 @@ import os
 
 def handle_upload_file(f):
 	#file is UploadedFile object
-	default_storage.save(f.name, f)
+	#default_storage.save(f.name, f)
 	path = os.path.join(settings.MEDIA_ROOT,f.name)
 	
 	res = []
@@ -48,7 +48,7 @@ def extractCsv_information(path):
 	#Clean empty lines from reads and indexes
 	out_reads=out_reads.replace('\r', '') #it appears the cmd_reads return '\r' in output
 	reads = [read for read in out_reads.split("\n") if read]
-	indexes = [index for index in out_indexes.split("\n") if index]
+	indexes = [len(index) for index in out_indexes.split("\n") if index]
 
 	conf_hash={}
 

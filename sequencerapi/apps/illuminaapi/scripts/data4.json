@@ -1,0 +1,25 @@
+{
+
+		"name":"michal-79",
+		"illumina_id":"1",
+		"csv":"michal-79",
+		"configuration":
+			{
+
+						"R1": {
+								"NumCycles":"100",
+								"IsIndexedRead":"no"
+							},
+						"R2": {
+								"NumCycles":"6",
+								"IsIndexedRead":"yes"
+						},
+						
+						"R3": {
+								"NumCycles":"100",
+								"IsIndexedRead":"no"
+						}
+			},
+}
+
+
