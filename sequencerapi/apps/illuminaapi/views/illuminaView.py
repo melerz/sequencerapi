@@ -29,6 +29,8 @@ def upload(request):
 def upload_post(request):
 	response= HttpResponse()
 
+	response['Content-Type'] = 'application/json'
+
 	response['Access-Control-Allow-Origin'] = '*'
 
 	response['Access-Control-Allow-Methods'] = 'OPTIONS, HEAD, GET, POST, PUT, DELETE'
@@ -36,13 +38,16 @@ def upload_post(request):
 	response['Access-Control-Allow-Headers'] = 'Content-Type, Content-Range, Content-Disposition'
 	
 	result=upload_file.handle_upload_file(request.FILES['files[]'])
-
-	output = {'files':result}
-	res_json = json.dumps(output)
-	response['Content-Type'] = 'application/json'
-	response.write(res_json)
-
-	return response
+	try:
+		result.has_key('error')
+		response.status_code = 403
+		response.write(json.dumps(result))
+		return response
+	except:
+		output = {'files':result}
+		res_json = json.dumps(output)
+		response.write(res_json)
+		return response
 
 def options(self):
 	pass

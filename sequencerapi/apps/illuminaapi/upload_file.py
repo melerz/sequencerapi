@@ -5,21 +5,25 @@ import subprocess
 import os
 
 def handle_upload_file(f):
-	#file is UploadedFile object
-	#default_storage.save(f.name, f)
-	path = os.path.join(settings.MEDIA_ROOT,f.name)
-	
-	res = []
-	configuration = extractCsv_information(path)	
-	result = {}
-	result['name']=f.name
-	result['type'] = f.content_type
-	result['size'] = f.size
-	result['url'] = "http://kernel"
-	result['configuration'] = configuration
+	if(f.content_type == 'application/vnd.ms-excel'):
 
-	res.append(result)
-	return res
+		#file is UploadedFile object
+		#default_storage.save(f.name, f)
+		path = os.path.join(settings.MEDIA_ROOT,f.name)
+		
+		res = []
+		configuration = extractCsv_information(path)	
+		result = {}
+		result['name']=f.name
+		result['type'] = f.content_type
+		result['size'] = f.size
+		result['url'] = "http://kernel"
+		result['configuration'] = configuration
+
+		res.append(result)
+		return res
+	else:
+		return {"error":"uploaded file is not a csv file"}
 
 
 def extractCsv_information(path):
@@ -48,7 +52,7 @@ def extractCsv_information(path):
 	#Clean empty lines from reads and indexes
 	out_reads=out_reads.replace('\r', '') #it appears the cmd_reads return '\r' in output
 	reads = [read for read in out_reads.split("\n") if read]
-	indexes = [len(index) for index in out_indexes.split("\n") if index]
+	indexes = [str(len(index)) for index in out_indexes.split("\n") if index]
 
 	conf_hash={}
 

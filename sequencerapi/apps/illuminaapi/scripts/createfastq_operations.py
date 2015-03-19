@@ -7,11 +7,16 @@ import csv
 import json
 import shutil
 import logging
+import time
 from django.conf import settings
+
+logger = logging.getLogger(__name__) #need to change that to __name__
+
 def createRundir(experiment,WEBSITE_PATH="/home/sheker/website/",BASE__ILLUMINA_PATH="/home/sheker/"):
 	try:
+		logger.debug("start createRundir: {0}".format(experiment))
 		#Creating dir_name if not exists
-		dir_name = experiment['name']
+		dir_name = experiment['run_id']+"-"+experiment['name']
 		if not (os.path.isdir(dir_name)):
 			os.mkdir(dir_name)
 		#enter into dir.
@@ -35,6 +40,7 @@ def createRundir(experiment,WEBSITE_PATH="/home/sheker/website/",BASE__ILLUMINA_
 		out,err=p.communicate() #communicate() returns (stdout,stderr) tuple
 		if (p.returncode != 0):
 			raise Exception("Error in running bash commands: %s" %err)
+		logger.debug("End createRundir successfully")
 	except Exception, e:
 		raise Exception("Exception in createRundir : %s" %e)
 
@@ -46,23 +52,21 @@ def runExpirement(experiment_data,xml_path="./RunInfo.xml"):
 		fastq folder should be a link to a website home directory.
 	'''
 	try:
+		logger.debug("start runExpirement: {0},{1}".format(experiment_data,xml_path))
 		#clean xml from reads
 		cleanXML(xml_path)
-		print "finished cleanning xml"
+
 		#modify xml reads settings based on configuration setting
 		configureXML(experiment_data['configuration'],xml_path)
-		print "finished configurig xml"
 
 		#create SampleSheet.csv based on samples settings
 		createSampleSheet(experiment_data['csv'],"./SampleSheet.csv")
-		print "finished creating csv"
 
 		#run the bcl2fastq
 		#p = subprocess.Popen("/usr/local/bcl2fastq/2.15.0.4/bin/bcl2fastq -o fastq -p 8 -d 6 -r 4 -w 4")
-
+		#time.sleep(10)
 		#create download link - mayb we don't need that!
-		# url=createDownloadLink(full_directory_name)
-		# print "finished create download link"
+		logger.debug("End runExpirement successfully")
 	except Exception, e:
 		raise Exception("Exception in runExpirement : %s" %e)
 
@@ -72,8 +76,7 @@ def cleanXML(path="./RunInfo.xml"):
 		This method clear the previous XML reads settings in the <Reads> element
 	'''
 	try:
-
-		print "im in cleanXML"
+		logger.debug("start cleanXML: {0}".format(path))
 		tree = ET.parse(path)
 		root = tree.getroot()
 		readsElement=root.find(".//Reads")
@@ -81,7 +84,7 @@ def cleanXML(path="./RunInfo.xml"):
 			readsElement.remove(read)
 
 		tree.write(path)
-
+		logger.debug("Finished cleanXML")
 	except Exception, e:
 		raise Exception("Exception in cleanXML : %s" %e)
 
@@ -93,7 +96,7 @@ def configureXML(configuration,path="./RunInfo.xml"):
 	'''
 
 	try:
-
+		logger.debug("start configureXML: {0},{1}".format(configuration,path))
 		print 'begiining configure xml'
 		tree = ET.parse(path)
 		root = tree.getroot()
@@ -104,6 +107,7 @@ def configureXML(configuration,path="./RunInfo.xml"):
 			ET.SubElement(readsElement,'Read',dict(Number=readIndex,NumCycles=configuration[readIndex]['NumCycles'],IsIndexedRead=configuration[readIndex]['IsIndexedRead']))
 
 		tree.write(path)
+		logger.debug("End configureXML successfully")
 
 	except Exception, e:
 		raise Exception("Exception in configureXML : %s" %e)
@@ -111,16 +115,14 @@ def configureXML(configuration,path="./RunInfo.xml"):
 def createSampleSheet(csv_file_name,csv_dest="./SampleSheet.csv"):
 	'''
 		This function copies the uploaded csv file from the website to the experiment folder
+		We assume we are in the experiment folder already
 	'''
 
 	try:
+		logger.debug("Start createSampleSheet: csv filename: {0}, destinationl: {1}".format(csv_file_name,csv_dest))
 		src = os.path.join(settings.MEDIA_ROOT,csv_file_name + ".csv")
-		copyfile(src,csv_dest)
+		shutil.copyfile(src,csv_dest)
+		logger.debug("End createSampleSheet")
 
 	except Exception, e:
 		raise Exception("error in createSampleSheet %s" % e)
-
-
-def createDownloadLink(folder_name):
-	print "im in create download link"
-	return None

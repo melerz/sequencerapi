@@ -1,0 +1,196 @@
+2015-03-19 05:39:35,667 - fastq - INFO - Currently experiment:michal-80
+2015-03-19 05:39:35,667 - fastq - INFO - michal-80: Init Directory
+2015-03-19 05:39:35,691 - fastq - ERROR - Exception in createRundir : Error in running bash commands: ln: creating symbolic link `./data': File exists
+ln: creating symbolic link `./data2': File exists
+ln: creating symbolic link `./RunInfo.xml': File exists
+ln: creating symbolic link `fastq/2015-03-19-michal-80': File exists
+Traceback (most recent call last):
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq.py", line 29, in run
+    operations.createRundir(data)
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq_operations.py", line 40, in createRundir
+    raise Exception("Exception in createRundir : %s" %e)
+Exception: Exception in createRundir : Error in running bash commands: ln: creating symbolic link `./data': File exists
+ln: creating symbolic link `./data2': File exists
+ln: creating symbolic link `./RunInfo.xml': File exists
+ln: creating symbolic link `fastq/2015-03-19-michal-80': File exists
+
+2015-03-19 05:42:59,029 - fastq10 - INFO - Currently experiment:michal-80
+2015-03-19 05:42:59,031 - fastq10 - INFO - michal-80: Init Directory
+2015-03-19 05:42:59,062 - fastq10 - INFO - michal-80: Run bcl2fastq
+2015-03-19 05:42:59,178 - fastq10 - INFO - michal-80: Finished
+2015-03-19 06:10:08,211 - fastq10 - INFO - Currently experiment:michal-79
+2015-03-19 06:10:08,212 - fastq10 - INFO - michal-79: Init Directory
+2015-03-19 06:10:08,262 - fastq10 - INFO - michal-79: Run bcl2fastq
+2015-03-19 06:10:08,471 - fastq10 - INFO - michal-79: Finished
+2015-03-19 06:13:09,310 - fastq10 - INFO - Currently experiment:adad
+2015-03-19 06:13:09,312 - fastq10 - INFO - adad: Init Directory
+2015-03-19 06:13:09,318 - fastq10 - ERROR - Exception in createRundir : 'illumina_name'
+Traceback (most recent call last):
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq.py", line 29, in run
+    operations.createRundir(data)
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq_operations.py", line 40, in createRundir
+    raise Exception("Exception in createRundir : %s" %e)
+Exception: Exception in createRundir : 'illumina_name'
+2015-03-19 06:13:59,681 - fastq10 - INFO - Currently experiment:sddsad
+2015-03-19 06:13:59,682 - fastq10 - INFO - sddsad: Init Directory
+2015-03-19 06:13:59,683 - fastq10 - ERROR - Exception in createRundir : 'illumina_name'
+Traceback (most recent call last):
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq.py", line 29, in run
+    operations.createRundir(data)
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq_operations.py", line 40, in createRundir
+    raise Exception("Exception in createRundir : %s" %e)
+Exception: Exception in createRundir : 'illumina_name'
+2015-03-19 10:29:35,177 - fastq10 - INFO - Currently experiment:michal-80
+2015-03-19 10:29:35,177 - fastq10 - INFO - michal-80: Init Directory
+2015-03-19 10:29:35,201 - fastq10 - INFO - michal-80: Run bcl2fastq
+2015-03-19 10:29:35,308 - fastq10 - INFO - michal-80: Finished
+2015-03-19 10:32:42,052 - fastq10 - INFO - Currently experiment:michal-80
+2015-03-19 10:32:42,053 - fastq10 - INFO - michal-80: Init Directory
+2015-03-19 10:32:42,086 - fastq10 - ERROR - Exception in createRundir : Error in running bash commands: ln: creating symbolic link `./*': File exists
+ln: creating symbolic link `fastq/2015-03-19-michal-80': File exists
+Traceback (most recent call last):
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq.py", line 29, in run
+    operations.createRundir(data)
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq_operations.py", line 40, in createRundir
+    raise Exception("Exception in createRundir : %s" %e)
+Exception: Exception in createRundir : Error in running bash commands: ln: creating symbolic link `./*': File exists
+ln: creating symbolic link `fastq/2015-03-19-michal-80': File exists
+
+2015-03-19 10:36:02,910 - fastq10 - INFO - Currently experiment:michal-80
+2015-03-19 10:36:02,911 - fastq10 - INFO - michal-80: Init Directory
+2015-03-19 10:36:02,942 - fastq10 - INFO - michal-80: Run bcl2fastq
+2015-03-19 10:36:02,943 - fastq10 - ERROR - Exception in runExpirement : Exception in cleanXML : [Errno 2] No such file or directory: './RunInfo.xml'
+Traceback (most recent call last):
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq.py", line 34, in run
+    operations.runExpirement(data)
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq_operations.py", line 68, in runExpirement
+    raise Exception("Exception in runExpirement : %s" %e)
+Exception: Exception in runExpirement : Exception in cleanXML : [Errno 2] No such file or directory: './RunInfo.xml'
+2015-03-19 10:36:55,235 - fastq10 - INFO - Currently experiment:michal-79
+2015-03-19 10:36:55,235 - fastq10 - INFO - michal-79: Init Directory
+2015-03-19 10:36:55,268 - fastq10 - INFO - michal-79: Run bcl2fastq
+2015-03-19 10:36:55,427 - fastq10 - INFO - michal-79: Finished
+2015-03-19 10:37:14,596 - fastq10 - INFO - Currently experiment:michal-80
+2015-03-19 10:37:14,596 - fastq10 - INFO - Currently experiment:michal-80
+2015-03-19 10:37:14,596 - fastq10 - INFO - michal-80: Init Directory
+2015-03-19 10:37:14,596 - fastq10 - INFO - michal-80: Init Directory
+2015-03-19 10:37:14,614 - fastq10 - INFO - michal-80: Run bcl2fastq
+2015-03-19 10:37:14,614 - fastq10 - INFO - michal-80: Run bcl2fastq
+2015-03-19 10:37:14,744 - fastq10 - INFO - michal-80: Finished
+2015-03-19 10:37:14,744 - fastq10 - INFO - michal-80: Finished
+2015-03-19 12:18:08,410 - fastq10 - INFO - Currently experiment:michal-80
+2015-03-19 12:18:08,410 - fastq10 - INFO - michal-80: Init Directory
+2015-03-19 12:18:08,444 - fastq10 - INFO - michal-80: Run bcl2fastq
+2015-03-19 12:18:08,578 - fastq10 - INFO - michal-80: Finished
+2015-03-19 12:27:55,124 - fastq10 - INFO - Currently experiment:michal-80
+2015-03-19 12:27:55,124 - fastq10 - INFO - Currently experiment:michal-80
+2015-03-19 12:27:55,124 - fastq10 - INFO - michal-80: Init Directory
+2015-03-19 12:27:55,124 - fastq10 - INFO - michal-80: Init Directory
+2015-03-19 12:27:55,159 - fastq10 - ERROR - Exception in createRundir : Error in running bash commands: ln: creating symbolic link `./data': File exists
+ln: creating symbolic link `./data2': File exists
+ln: creating symbolic link `./RunInfo.xml': File exists
+ln: creating symbolic link `fastq/2015-03-19-michal-80': File exists
+Traceback (most recent call last):
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq.py", line 29, in run
+    operations.createRundir(data)
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq_operations.py", line 40, in createRundir
+    raise Exception("Exception in createRundir : %s" %e)
+Exception: Exception in createRundir : Error in running bash commands: ln: creating symbolic link `./data': File exists
+ln: creating symbolic link `./data2': File exists
+ln: creating symbolic link `./RunInfo.xml': File exists
+ln: creating symbolic link `fastq/2015-03-19-michal-80': File exists
+
+2015-03-19 12:27:55,159 - fastq10 - ERROR - Exception in createRundir : Error in running bash commands: ln: creating symbolic link `./data': File exists
+ln: creating symbolic link `./data2': File exists
+ln: creating symbolic link `./RunInfo.xml': File exists
+ln: creating symbolic link `fastq/2015-03-19-michal-80': File exists
+Traceback (most recent call last):
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq.py", line 29, in run
+    operations.createRundir(data)
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq_operations.py", line 40, in createRundir
+    raise Exception("Exception in createRundir : %s" %e)
+Exception: Exception in createRundir : Error in running bash commands: ln: creating symbolic link `./data': File exists
+ln: creating symbolic link `./data2': File exists
+ln: creating symbolic link `./RunInfo.xml': File exists
+ln: creating symbolic link `fastq/2015-03-19-michal-80': File exists
+
+2015-03-19 12:50:28,632 - fastq10 - INFO - Currently experiment:michal-80
+2015-03-19 12:50:28,633 - fastq10 - INFO - michal-80: Init Directory
+2015-03-19 12:50:28,665 - fastq10 - INFO - michal-80: Run bcl2fastq
+2015-03-19 12:50:28,771 - fastq10 - INFO - michal-80: Finished
+2015-03-19 12:51:45,019 - fastq10 - INFO - Currently experiment:michal-79
+2015-03-19 12:51:45,020 - fastq10 - INFO - michal-79: Init Directory
+2015-03-19 12:51:45,058 - fastq10 - INFO - michal-79: Run bcl2fastq
+2015-03-19 12:51:45,209 - fastq10 - INFO - michal-79: Finished
+2015-03-19 12:54:05,868 - fastq10 - INFO - Currently experiment:michal-80
+2015-03-19 12:54:05,870 - fastq10 - INFO - michal-80: Init Directory
+2015-03-19 12:54:05,871 - fastq10.operations - DEBUG - start createRundir: {u'configuration': {u'1': {u'IsIndexedRead': u'no', u'NumCycles': u'75'}, u'3': {u'IsIndexedRead': u'yes', u'NumCycles': u'8'}, u'2': {u'IsIndexedRead': u'yes', u'NumCycles': u'8'}}, u'run': u'http://132.65.120.148:8080/illuminaapi/run/174/', u'name': u'michal-80', 'illumina_name': 'data2', u'illumina_id': u'2', u'csv': u'michal-80'}
+2015-03-19 12:54:05,904 - fastq10.operations - DEBUG - End createRundir successfully
+2015-03-19 12:54:05,904 - fastq10 - INFO - michal-80: Run bcl2fastq
+2015-03-19 12:54:05,904 - fastq10.operations - DEBUG - start runExpirement: {u'configuration': {u'1': {u'IsIndexedRead': u'no', u'NumCycles': u'75'}, u'3': {u'IsIndexedRead': u'yes', u'NumCycles': u'8'}, u'2': {u'IsIndexedRead': u'yes', u'NumCycles': u'8'}}, u'run': u'http://132.65.120.148:8080/illuminaapi/run/174/', u'name': u'michal-80', 'illumina_name': 'data2', u'illumina_id': u'2', u'csv': u'michal-80'},./RunInfo.xml
+2015-03-19 12:54:05,905 - fastq10.operations - DEBUG - start cleanXML: ./RunInfo.xml
+2015-03-19 12:54:06,070 - fastq10.operations - DEBUG - Finished cleanXML
+2015-03-19 12:54:06,071 - fastq10.operations - DEBUG - start configureXML: {u'1': {u'IsIndexedRead': u'no', u'NumCycles': u'75'}, u'3': {u'IsIndexedRead': u'yes', u'NumCycles': u'8'}, u'2': {u'IsIndexedRead': u'yes', u'NumCycles': u'8'}},./RunInfo.xml
+2015-03-19 12:54:06,142 - fastq10.operations - DEBUG - End configureXML successfully
+2015-03-19 12:54:06,142 - fastq10.operations - DEBUG - Start createSampleSheet: csv filename: michal-80, destinationl: ./SampleSheet.csv
+2015-03-19 12:54:06,143 - fastq10.operations - DEBUG - End createSampleSheet
+2015-03-19 12:54:06,144 - fastq10.operations - DEBUG - End runExpirement successfully
+2015-03-19 12:54:06,144 - fastq10 - INFO - michal-80: Finished
+2015-03-19 13:02:00,863 - apps.illuminaapi.scripts.createfastq - INFO - Currently experiment:michal-80
+2015-03-19 13:02:00,864 - apps.illuminaapi.scripts.createfastq - INFO - michal-80: Init Directory
+2015-03-19 13:02:00,889 - apps.illuminaapi.scripts.createfastq - ERROR - Exception in createRundir : Error in running bash commands: ln: creating symbolic link `./data': File exists
+ln: creating symbolic link `./data2': File exists
+ln: creating symbolic link `./RunInfo.xml': File exists
+ln: creating symbolic link `fastq/2015-03-19-michal-80': File exists
+Traceback (most recent call last):
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq.py", line 29, in run
+    operations.createRundir(data)
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq_operations.py", line 45, in createRundir
+    raise Exception("Exception in createRundir : %s" %e)
+Exception: Exception in createRundir : Error in running bash commands: ln: creating symbolic link `./data': File exists
+ln: creating symbolic link `./data2': File exists
+ln: creating symbolic link `./RunInfo.xml': File exists
+ln: creating symbolic link `fastq/2015-03-19-michal-80': File exists
+
+2015-03-19 13:11:48,995 - apps.illuminaapi.scripts.createfastq - INFO - Currently experiment:michal-80
+2015-03-19 13:11:48,996 - apps.illuminaapi.scripts.createfastq - INFO - michal-80: Init Directory
+2015-03-19 13:11:48,996 - apps.illuminaapi.scripts.createfastq - ERROR - Exception in createRundir : 'id'
+Traceback (most recent call last):
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq.py", line 29, in run
+    operations.createRundir(data)
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq_operations.py", line 45, in createRundir
+    raise Exception("Exception in createRundir : %s" %e)
+Exception: Exception in createRundir : 'id'
+2015-03-19 13:13:01,710 - apps.illuminaapi.scripts.createfastq - INFO - Currently experiment:michal-80
+2015-03-19 13:13:01,710 - apps.illuminaapi.scripts.createfastq - INFO - michal-80: Init Directory
+2015-03-19 13:13:01,711 - apps.illuminaapi.scripts.createfastq - ERROR - Exception in createRundir : unsupported operand type(s) for +: 'int' and 'str'
+Traceback (most recent call last):
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq.py", line 29, in run
+    operations.createRundir(data)
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq_operations.py", line 45, in createRundir
+    raise Exception("Exception in createRundir : %s" %e)
+Exception: Exception in createRundir : unsupported operand type(s) for +: 'int' and 'str'
+2015-03-19 13:15:34,704 - apps.illuminaapi.scripts.createfastq - INFO - Currently experiment:michal-80
+2015-03-19 13:15:34,705 - apps.illuminaapi.scripts.createfastq - INFO - michal-80: Init Directory
+2015-03-19 13:15:34,732 - apps.illuminaapi.scripts.createfastq - INFO - michal-80: Run bcl2fastq
+2015-03-19 13:15:34,847 - apps.illuminaapi.scripts.createfastq - INFO - michal-80: Finished
+2015-03-19 13:15:53,019 - apps.illuminaapi.scripts.createfastq - INFO - Currently experiment:michal-80
+2015-03-19 13:15:53,019 - apps.illuminaapi.scripts.createfastq - INFO - Currently experiment:michal-80
+2015-03-19 13:15:53,022 - apps.illuminaapi.scripts.createfastq - INFO - michal-80: Init Directory
+2015-03-19 13:15:53,022 - apps.illuminaapi.scripts.createfastq - INFO - michal-80: Init Directory
+2015-03-19 13:15:53,059 - apps.illuminaapi.scripts.createfastq - INFO - michal-80: Run bcl2fastq
+2015-03-19 13:15:53,059 - apps.illuminaapi.scripts.createfastq - INFO - michal-80: Run bcl2fastq
+2015-03-19 13:15:53,327 - apps.illuminaapi.scripts.createfastq - INFO - michal-80: Finished
+2015-03-19 13:15:53,327 - apps.illuminaapi.scripts.createfastq - INFO - michal-80: Finished
+2015-03-19 13:16:31,332 - apps.illuminaapi.scripts.createfastq - INFO - Currently experiment:michal-79
+2015-03-19 13:16:31,332 - apps.illuminaapi.scripts.createfastq - INFO - Currently experiment:michal-79
+2015-03-19 13:16:31,332 - apps.illuminaapi.scripts.createfastq - INFO - Currently experiment:michal-79
+2015-03-19 13:16:31,333 - apps.illuminaapi.scripts.createfastq - INFO - michal-79: Init Directory
+2015-03-19 13:16:31,333 - apps.illuminaapi.scripts.createfastq - INFO - michal-79: Init Directory
+2015-03-19 13:16:31,333 - apps.illuminaapi.scripts.createfastq - INFO - michal-79: Init Directory
+2015-03-19 13:16:31,356 - apps.illuminaapi.scripts.createfastq - INFO - michal-79: Run bcl2fastq
+2015-03-19 13:16:31,356 - apps.illuminaapi.scripts.createfastq - INFO - michal-79: Run bcl2fastq
+2015-03-19 13:16:31,356 - apps.illuminaapi.scripts.createfastq - INFO - michal-79: Run bcl2fastq
+2015-03-19 13:16:31,501 - apps.illuminaapi.scripts.createfastq - INFO - michal-79: Finished
+2015-03-19 13:16:31,501 - apps.illuminaapi.scripts.createfastq - INFO - michal-79: Finished
+2015-03-19 13:16:31,501 - apps.illuminaapi.scripts.createfastq - INFO - michal-79: Finished

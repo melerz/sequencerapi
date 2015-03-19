@@ -16,6 +16,7 @@ def run(data,log_level="INFO",log_file="./fastq-log.log"):
 	'''
 	try:
 		#This logger object is used in the library too
+
 		logger = configure_logging(log_level,log_file)
 
 		logger.info(("Currently experiment:{0}".format(data['name'])))
@@ -49,7 +50,7 @@ def configure_logging(log_level="INFO",log_file="./fastq-log.log"):
 	if not isinstance(loglevel, int):
 		raise Exception("Invalid log level: %s" %loglevel)
 	#logging.basicConfig(filename=log_file,level=loglevel,foremat="%(name)s:%(levelname)s:%(message)s")
-	logger=logging.getLogger("fastq") #need to change that to __name__
+	logger=logging.getLogger(__name__) #need to change that to __name__
 	logger.setLevel(loglevel)
 	file_handler = logging.FileHandler(log_file)
 	formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
