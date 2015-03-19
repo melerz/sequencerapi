@@ -26,8 +26,10 @@ class AnalyzeList(generics.ListCreateAPIView):
 	 	data=self.request.data
 	 	illuminaName = Illumina.objects.get(id=data['illumina_id']).name
 	 	data["illumina_name"] = "data2"	 	
- 		serializer.save()
+ 		analyzeModel = serializer.save()
  		createfastq.run(data)
+ 		analyzeModel.status = "Finished"
+ 		analyzeModel.save()
 
 class AnalyzeDetail(generics.RetrieveUpdateDestroyAPIView):
 	queryset = Analyze.objects.all()

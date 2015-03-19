@@ -33,6 +33,7 @@ def run(data,log_level="INFO",log_file="./fastq-log.log"):
 		#Output folder is fastq, created by createRundir
 		operations.runExpirement(data)
 
+		
 		#Changing back to the main folder
 		os.chdir(currentLocation)
 

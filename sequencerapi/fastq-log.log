@@ -194,3 +194,15 @@ Exception: Exception in createRundir : unsupported operand type(s) for +: 'int' 
 2015-03-19 13:16:31,501 - apps.illuminaapi.scripts.createfastq - INFO - michal-79: Finished
 2015-03-19 13:16:31,501 - apps.illuminaapi.scripts.createfastq - INFO - michal-79: Finished
 2015-03-19 13:16:31,501 - apps.illuminaapi.scripts.createfastq - INFO - michal-79: Finished
+2015-03-19 15:18:36,439 - apps.illuminaapi.scripts.createfastq - INFO - Currently experiment:michal-80
+2015-03-19 15:18:36,439 - apps.illuminaapi.scripts.createfastq - INFO - michal-80: Init Directory
+2015-03-19 15:18:36,495 - apps.illuminaapi.scripts.createfastq - INFO - michal-80: Run bcl2fastq
+2015-03-19 15:18:36,641 - apps.illuminaapi.scripts.createfastq - INFO - michal-80: Finished
+2015-03-19 15:19:42,773 - apps.illuminaapi.scripts.createfastq - INFO - Currently experiment:michal-80
+2015-03-19 15:19:42,773 - apps.illuminaapi.scripts.createfastq - INFO - michal-80: Init Directory
+2015-03-19 15:19:42,819 - apps.illuminaapi.scripts.createfastq - INFO - michal-80: Run bcl2fastq
+2015-03-19 15:19:42,940 - apps.illuminaapi.scripts.createfastq - INFO - michal-80: Finished
+2015-03-19 15:20:21,386 - apps.illuminaapi.scripts.createfastq - INFO - Currently experiment:michal-80
+2015-03-19 15:20:21,386 - apps.illuminaapi.scripts.createfastq - INFO - michal-80: Init Directory
+2015-03-19 15:20:21,426 - apps.illuminaapi.scripts.createfastq - INFO - michal-80: Run bcl2fastq
+2015-03-19 15:20:31,572 - apps.illuminaapi.scripts.createfastq - INFO - michal-80: Finished
