@@ -2,8 +2,8 @@ import logging
 import os
 import createfastq_operations as operations
 import sys
-
-def run(data,jobModel,analyzeModel,log_level="INFO",log_file="./fastq-log.log"):
+import requests
+def run(data,log_level="INFO",log_file="./fastq-log.log"):
 	'''
 		For each expierment in the data, create a folder with the expirement name, and init it by
 		calling the createRundir function.
@@ -32,17 +32,18 @@ def run(data,jobModel,analyzeModel,log_level="INFO",log_file="./fastq-log.log"):
 		#Output folder is fastq, created by createRundir
 		operations.runExpirement(data)
 
-
+		update_data("http://10.100.102.11:8080/illuminaapi/job/%s/"%data['job_id'],
+				{'description':'finished to generate fastq'})
 		#Changing back to the main folder
+
 		os.chdir(currentLocation)
 
 		logger.info("{0}: Finished".format(data['name']))
 
 	except Exception as e:
 		logger.exception(e)
-		jobModel.description = e.message
-		jobModel.status = "Failed"
-		jobModel.save()
+		update_data("http://10.100.102.11:8080/illuminaapi/job/%s/"%data['job_id'],
+			{'description':'%s'%e})
 		print "main exception. See log file for further details:%s"%e
 		exc_type,exc_obj,exc_tb = sys.exc_info()
 		fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
@@ -60,3 +61,15 @@ def configure_logging(log_level="INFO",log_file="./fastq-log.log"):
 	file_handler.setFormatter(formatter)
 	logger.addHandler(file_handler)
 	return logger
+
+
+def update_data(url,data):
+	get=requests.get(url)
+	if get.ok:
+		old_data = get.json()
+		old_data.update(data)
+		update=requests.put(url,old_data)
+		if not (update.ok):
+			raise Exception("Couldn't update %s: %s : %s" %(url,update.reason,update.content))
+	else:
+		raise Exception("Couldn't get url %s: %s" %(url,get.reason))
