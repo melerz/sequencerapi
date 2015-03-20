@@ -16,12 +16,14 @@ class IlluminaSerializer(serializers.ModelSerializer):
 
 class AnalyzeSerializer(serializers.HyperlinkedModelSerializer):
 	created = serializers.DateTimeField(format='%Y-%m-%d-%H:%M',read_only=True)
+	job = serializers.HyperlinkedRelatedField(many=True,read_only=True,view_name='job-detail')
 	class Meta:
 		model = Analyze
-		fields = ('id','name','illumina','created','csv','configuration','url','status')
+		fields = ('id','name','illumina','created','csv','configuration','url','status','job')
 
 
 class JobSerializer(serializers.HyperlinkedModelSerializer):
+	created = serializers.DateTimeField(format='%Y-%m-%d-%H:%M',read_only=True)
 	class Meta:
 		model = Job
 		fields = ('id','analyze','created','status','description')

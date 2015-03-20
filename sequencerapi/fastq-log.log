@@ -434,3 +434,44 @@ Traceback (most recent call last):
   File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq_operations.py", line 72, in runExpirement
     raise Exception("Exception in runExpirement : %s" %e)
 Exception: Exception in runExpirement : Exception in configureXML : 'unicode' object has no attribute 'keys'
+2015-03-20 05:24:58,764 - apps.illuminaapi.scripts.createfastq - INFO - Currently experiment:michal-80
+2015-03-20 05:24:58,764 - apps.illuminaapi.scripts.createfastq - INFO - michal-80: Init Directory
+2015-03-20 05:24:58,782 - apps.illuminaapi.scripts.createfastq - INFO - michal-80: Run bcl2fastq
+2015-03-20 05:25:08,910 - apps.illuminaapi.scripts.createfastq - INFO - michal-80: Finished
+2015-03-20 06:41:02,158 - apps.illuminaapi.scripts.createfastq - INFO - Currently experiment:analyze-from-web
+2015-03-20 06:41:02,159 - apps.illuminaapi.scripts.createfastq - INFO - analyze-from-web: Init Directory
+2015-03-20 06:41:02,159 - apps.illuminaapi.scripts.createfastq - ERROR - Exception in createRundir : "'analyze_id'"
+Traceback (most recent call last):
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq.py", line 29, in run
+    operations.createRundir(data)
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq_operations.py", line 45, in createRundir
+    raise Exception("Exception in createRundir : %s" %e)
+Exception: Exception in createRundir : "'analyze_id'"
+2015-03-20 06:41:36,907 - apps.illuminaapi.scripts.createfastq - INFO - Currently experiment:analyze-from-web
+2015-03-20 06:41:36,908 - apps.illuminaapi.scripts.createfastq - INFO - analyze-from-web: Init Directory
+2015-03-20 06:41:36,908 - apps.illuminaapi.scripts.createfastq - ERROR - Exception in createRundir : "'analyze_id'"
+Traceback (most recent call last):
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq.py", line 29, in run
+    operations.createRundir(data)
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq_operations.py", line 45, in createRundir
+    raise Exception("Exception in createRundir : %s" %e)
+Exception: Exception in createRundir : "'analyze_id'"
+2015-03-20 06:48:30,050 - apps.illuminaapi.scripts.createfastq - INFO - Currently experiment:analyze-from-web-2
+2015-03-20 06:48:30,051 - apps.illuminaapi.scripts.createfastq - INFO - analyze-from-web-2: Init Directory
+2015-03-20 06:48:30,051 - apps.illuminaapi.scripts.createfastq - ERROR - Exception in createRundir : "'analyze_id'"
+Traceback (most recent call last):
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq.py", line 29, in run
+    operations.createRundir(data)
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq_operations.py", line 45, in createRundir
+    raise Exception("Exception in createRundir : %s" %e)
+Exception: Exception in createRundir : "'analyze_id'"
+2015-03-20 07:15:44,112 - apps.illuminaapi.scripts.createfastq - INFO - Currently experiment:analyze-from-web-4
+2015-03-20 07:15:44,113 - apps.illuminaapi.scripts.createfastq - INFO - analyze-from-web-4: Init Directory
+2015-03-20 07:15:44,129 - apps.illuminaapi.scripts.createfastq - INFO - analyze-from-web-4: Run bcl2fastq
+2015-03-20 07:15:44,170 - apps.illuminaapi.scripts.createfastq - ERROR - Exception in runExpirement : Exception in configureXML : 'unicode' object has no attribute 'keys'
+Traceback (most recent call last):
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq.py", line 33, in run
+    operations.runExpirement(data)
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq_operations.py", line 72, in runExpirement
+    raise Exception("Exception in runExpirement : %s" %e)
+Exception: Exception in runExpirement : Exception in configureXML : 'unicode' object has no attribute 'keys'

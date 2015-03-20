@@ -3,8 +3,7 @@ import os
 import createfastq_operations as operations
 import sys
 
-
-def run(data,log_level="INFO",log_file="./fastq-log.log"):
+def run(data,jobModel,analyzeModel,log_level="INFO",log_file="./fastq-log.log"):
 	'''
 		For each expierment in the data, create a folder with the expirement name, and init it by
 		calling the createRundir function.
@@ -33,7 +32,7 @@ def run(data,log_level="INFO",log_file="./fastq-log.log"):
 		#Output folder is fastq, created by createRundir
 		operations.runExpirement(data)
 
-		
+
 		#Changing back to the main folder
 		os.chdir(currentLocation)
 
@@ -41,6 +40,9 @@ def run(data,log_level="INFO",log_file="./fastq-log.log"):
 
 	except Exception as e:
 		logger.exception(e)
+		jobModel.description = e.message
+		jobModel.status = "Failed"
+		jobModel.save()
 		print "main exception. See log file for further details:%s"%e
 		exc_type,exc_obj,exc_tb = sys.exc_info()
 		fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]

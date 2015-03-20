@@ -35,7 +35,7 @@ class Analyze(models.Model):
 		return self.name
 
 class Job(models.Model):
-	analyze = models.ForeignKey('analyze',related_name='analyzes')
+	analyze = models.ForeignKey('analyze',unique=True,related_name='job')
 	created = models.DateTimeField(auto_now_add=True)
 	status = models.CharField(max_length=200,default=get_status) #Runnig,#Finished,#Failed
 	description = models.CharField(max_length=200)

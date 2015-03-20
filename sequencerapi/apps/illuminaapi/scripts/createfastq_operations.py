@@ -16,7 +16,7 @@ def createRundir(experiment,WEBSITE_PATH="/home/sheker/website/",BASE_ILLUMINA_P
 	try:
 		logger.debug("start createRundir: {0}".format(experiment))
 		#Creating dir_name if not exists
-		dir_name = experiment['analyze_id']+"-"+experiment['name']
+		dir_name = experiment['job_id']+"-"+experiment['name']
 		if not (os.path.isdir(dir_name)):
 			os.mkdir(dir_name)
 		#enter into dir.
