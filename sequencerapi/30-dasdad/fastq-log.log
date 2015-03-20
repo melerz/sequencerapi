@@ -1,0 +1,10 @@
+2015-03-20 04:37:18,143 - apps.illuminaapi.scripts.createfastq - INFO - Currently experiment:sdssf
+2015-03-20 04:37:18,144 - apps.illuminaapi.scripts.createfastq - INFO - sdssf: Init Directory
+2015-03-20 04:37:18,215 - apps.illuminaapi.scripts.createfastq - INFO - sdssf: Run bcl2fastq
+2015-03-20 04:37:18,366 - apps.illuminaapi.scripts.createfastq - ERROR - Exception in runExpirement : Exception in configureXML : 'unicode' object has no attribute 'keys'
+Traceback (most recent call last):
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq.py", line 34, in run
+    operations.runExpirement(data)
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq_operations.py", line 72, in runExpirement
+    raise Exception("Exception in runExpirement : %s" %e)
+Exception: Exception in runExpirement : Exception in configureXML : 'unicode' object has no attribute 'keys'

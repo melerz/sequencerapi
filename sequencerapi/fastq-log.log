@@ -224,3 +224,213 @@ Traceback (most recent call last):
   File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq_operations.py", line 45, in createRundir
     raise Exception("Exception in createRundir : %s" %e)
 Exception: Exception in createRundir : 'analyze_id'
+2015-03-20 03:35:47,331 - apps.illuminaapi.scripts.createfastq - INFO - Currently experiment:check status 202
+2015-03-20 03:35:47,331 - apps.illuminaapi.scripts.createfastq - INFO - check status 202: Init Directory
+2015-03-20 03:35:47,331 - apps.illuminaapi.scripts.createfastq - ERROR - Exception in createRundir : 'analyze_id'
+Traceback (most recent call last):
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq.py", line 29, in run
+    operations.createRundir(data)
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq_operations.py", line 45, in createRundir
+    raise Exception("Exception in createRundir : %s" %e)
+Exception: Exception in createRundir : 'analyze_id'
+2015-03-20 03:36:14,155 - apps.illuminaapi.scripts.createfastq - INFO - Currently experiment:check status 202
+2015-03-20 03:36:14,155 - apps.illuminaapi.scripts.createfastq - INFO - check status 202: Init Directory
+2015-03-20 03:36:14,156 - apps.illuminaapi.scripts.createfastq - ERROR - Exception in createRundir : 'analyze_id'
+Traceback (most recent call last):
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq.py", line 29, in run
+    operations.createRundir(data)
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq_operations.py", line 45, in createRundir
+    raise Exception("Exception in createRundir : %s" %e)
+Exception: Exception in createRundir : 'analyze_id'
+2015-03-20 03:36:58,871 - apps.illuminaapi.scripts.createfastq - INFO - Currently experiment:afadad
+2015-03-20 03:36:58,872 - apps.illuminaapi.scripts.createfastq - INFO - afadad: Init Directory
+2015-03-20 03:36:58,872 - apps.illuminaapi.scripts.createfastq - ERROR - Exception in createRundir : 'analyze_id'
+Traceback (most recent call last):
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq.py", line 29, in run
+    operations.createRundir(data)
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq_operations.py", line 45, in createRundir
+    raise Exception("Exception in createRundir : %s" %e)
+Exception: Exception in createRundir : 'analyze_id'
+2015-03-20 03:39:10,285 - apps.illuminaapi.scripts.createfastq - INFO - Currently experiment:afadadadad
+2015-03-20 03:39:10,285 - apps.illuminaapi.scripts.createfastq - INFO - afadadadad: Init Directory
+2015-03-20 03:39:10,285 - apps.illuminaapi.scripts.createfastq - ERROR - Exception in createRundir : 'analyze_id'
+Traceback (most recent call last):
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq.py", line 29, in run
+    operations.createRundir(data)
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq_operations.py", line 45, in createRundir
+    raise Exception("Exception in createRundir : %s" %e)
+Exception: Exception in createRundir : 'analyze_id'
+2015-03-20 03:45:54,815 - apps.illuminaapi.scripts.createfastq - INFO - Currently experiment:adad
+2015-03-20 03:45:54,816 - apps.illuminaapi.scripts.createfastq - INFO - adad: Init Directory
+2015-03-20 03:45:54,816 - apps.illuminaapi.scripts.createfastq - ERROR - Exception in createRundir : 'analyze_id'
+Traceback (most recent call last):
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq.py", line 29, in run
+    operations.createRundir(data)
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq_operations.py", line 45, in createRundir
+    raise Exception("Exception in createRundir : %s" %e)
+Exception: Exception in createRundir : 'analyze_id'
+2015-03-20 03:47:13,547 - apps.illuminaapi.scripts.createfastq - INFO - Currently experiment:zxczc
+2015-03-20 03:47:13,547 - apps.illuminaapi.scripts.createfastq - INFO - zxczc: Init Directory
+2015-03-20 03:47:13,547 - apps.illuminaapi.scripts.createfastq - ERROR - Exception in createRundir : 'analyze_id'
+Traceback (most recent call last):
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq.py", line 29, in run
+    operations.createRundir(data)
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq_operations.py", line 45, in createRundir
+    raise Exception("Exception in createRundir : %s" %e)
+Exception: Exception in createRundir : 'analyze_id'
+2015-03-20 03:49:48,855 - apps.illuminaapi.scripts.createfastq - INFO - Currently experiment:13123
+2015-03-20 03:49:48,855 - apps.illuminaapi.scripts.createfastq - INFO - 13123: Init Directory
+2015-03-20 03:49:48,856 - apps.illuminaapi.scripts.createfastq - ERROR - Exception in createRundir : 'analyze_id'
+Traceback (most recent call last):
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq.py", line 29, in run
+    operations.createRundir(data)
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq_operations.py", line 45, in createRundir
+    raise Exception("Exception in createRundir : %s" %e)
+Exception: Exception in createRundir : 'analyze_id'
+2015-03-20 03:50:05,434 - apps.illuminaapi.scripts.createfastq - INFO - Currently experiment:13123
+2015-03-20 03:50:05,434 - apps.illuminaapi.scripts.createfastq - INFO - 13123: Init Directory
+2015-03-20 03:50:05,434 - apps.illuminaapi.scripts.createfastq - ERROR - Exception in createRundir : 'analyze_id'
+Traceback (most recent call last):
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq.py", line 29, in run
+    operations.createRundir(data)
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq_operations.py", line 45, in createRundir
+    raise Exception("Exception in createRundir : %s" %e)
+Exception: Exception in createRundir : 'analyze_id'
+2015-03-20 03:50:13,790 - apps.illuminaapi.scripts.createfastq - INFO - Currently experiment:13123
+2015-03-20 03:50:13,790 - apps.illuminaapi.scripts.createfastq - INFO - Currently experiment:13123
+2015-03-20 03:50:13,791 - apps.illuminaapi.scripts.createfastq - INFO - 13123: Init Directory
+2015-03-20 03:50:13,791 - apps.illuminaapi.scripts.createfastq - INFO - 13123: Init Directory
+2015-03-20 03:50:13,791 - apps.illuminaapi.scripts.createfastq - ERROR - Exception in createRundir : 'analyze_id'
+Traceback (most recent call last):
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq.py", line 29, in run
+    operations.createRundir(data)
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq_operations.py", line 45, in createRundir
+    raise Exception("Exception in createRundir : %s" %e)
+Exception: Exception in createRundir : 'analyze_id'
+2015-03-20 03:50:13,791 - apps.illuminaapi.scripts.createfastq - ERROR - Exception in createRundir : 'analyze_id'
+Traceback (most recent call last):
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq.py", line 29, in run
+    operations.createRundir(data)
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq_operations.py", line 45, in createRundir
+    raise Exception("Exception in createRundir : %s" %e)
+Exception: Exception in createRundir : 'analyze_id'
+2015-03-20 03:50:17,863 - apps.illuminaapi.scripts.createfastq - INFO - Currently experiment:13123
+2015-03-20 03:50:17,864 - apps.illuminaapi.scripts.createfastq - INFO - 13123: Init Directory
+2015-03-20 03:50:17,865 - apps.illuminaapi.scripts.createfastq - ERROR - Exception in createRundir : 'analyze_id'
+Traceback (most recent call last):
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq.py", line 29, in run
+    operations.createRundir(data)
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq_operations.py", line 45, in createRundir
+    raise Exception("Exception in createRundir : %s" %e)
+Exception: Exception in createRundir : 'analyze_id'
+2015-03-20 03:50:41,994 - apps.illuminaapi.scripts.createfastq - INFO - Currently experiment:dfsf
+2015-03-20 03:50:41,994 - apps.illuminaapi.scripts.createfastq - INFO - Currently experiment:dfsf
+2015-03-20 03:50:41,994 - apps.illuminaapi.scripts.createfastq - INFO - dfsf: Init Directory
+2015-03-20 03:50:41,994 - apps.illuminaapi.scripts.createfastq - INFO - dfsf: Init Directory
+2015-03-20 03:50:41,994 - apps.illuminaapi.scripts.createfastq - ERROR - Exception in createRundir : 'analyze_id'
+Traceback (most recent call last):
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq.py", line 29, in run
+    operations.createRundir(data)
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq_operations.py", line 45, in createRundir
+    raise Exception("Exception in createRundir : %s" %e)
+Exception: Exception in createRundir : 'analyze_id'
+2015-03-20 03:50:41,994 - apps.illuminaapi.scripts.createfastq - ERROR - Exception in createRundir : 'analyze_id'
+Traceback (most recent call last):
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq.py", line 29, in run
+    operations.createRundir(data)
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq_operations.py", line 45, in createRundir
+    raise Exception("Exception in createRundir : %s" %e)
+Exception: Exception in createRundir : 'analyze_id'
+2015-03-20 03:54:30,496 - apps.illuminaapi.scripts.createfastq - INFO - Currently experiment:from shell
+2015-03-20 03:54:30,496 - apps.illuminaapi.scripts.createfastq - INFO - Currently experiment:from shell
+2015-03-20 03:54:30,496 - apps.illuminaapi.scripts.createfastq - INFO - Currently experiment:from shell
+2015-03-20 03:54:30,497 - apps.illuminaapi.scripts.createfastq - INFO - from shell: Init Directory
+2015-03-20 03:54:30,497 - apps.illuminaapi.scripts.createfastq - INFO - from shell: Init Directory
+2015-03-20 03:54:30,497 - apps.illuminaapi.scripts.createfastq - INFO - from shell: Init Directory
+2015-03-20 03:54:30,497 - apps.illuminaapi.scripts.createfastq - ERROR - Exception in createRundir : 'analyze_id'
+Traceback (most recent call last):
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq.py", line 29, in run
+    operations.createRundir(data)
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq_operations.py", line 45, in createRundir
+    raise Exception("Exception in createRundir : %s" %e)
+Exception: Exception in createRundir : 'analyze_id'
+2015-03-20 03:54:30,497 - apps.illuminaapi.scripts.createfastq - ERROR - Exception in createRundir : 'analyze_id'
+Traceback (most recent call last):
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq.py", line 29, in run
+    operations.createRundir(data)
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq_operations.py", line 45, in createRundir
+    raise Exception("Exception in createRundir : %s" %e)
+Exception: Exception in createRundir : 'analyze_id'
+2015-03-20 03:54:30,497 - apps.illuminaapi.scripts.createfastq - ERROR - Exception in createRundir : 'analyze_id'
+Traceback (most recent call last):
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq.py", line 29, in run
+    operations.createRundir(data)
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq_operations.py", line 45, in createRundir
+    raise Exception("Exception in createRundir : %s" %e)
+Exception: Exception in createRundir : 'analyze_id'
+2015-03-20 04:03:35,544 - apps.illuminaapi.scripts.createfastq - INFO - Currently experiment:from shell
+2015-03-20 04:03:35,545 - apps.illuminaapi.scripts.createfastq - INFO - from shell: Init Directory
+2015-03-20 04:03:35,545 - apps.illuminaapi.scripts.createfastq - ERROR - Exception in createRundir : 'analyze_id'
+Traceback (most recent call last):
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq.py", line 29, in run
+    operations.createRundir(data)
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq_operations.py", line 45, in createRundir
+    raise Exception("Exception in createRundir : %s" %e)
+Exception: Exception in createRundir : 'analyze_id'
+2015-03-20 04:24:09,748 - apps.illuminaapi.scripts.createfastq - INFO - Currently experiment:asdad
+2015-03-20 04:24:09,749 - apps.illuminaapi.scripts.createfastq - INFO - asdad: Init Directory
+2015-03-20 04:24:09,749 - apps.illuminaapi.scripts.createfastq - ERROR - Exception in createRundir : unsupported operand type(s) for +: 'int' and 'str'
+Traceback (most recent call last):
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq.py", line 29, in run
+    operations.createRundir(data)
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq_operations.py", line 45, in createRundir
+    raise Exception("Exception in createRundir : %s" %e)
+Exception: Exception in createRundir : unsupported operand type(s) for +: 'int' and 'str'
+2015-03-20 04:24:09,966 - apps.illuminaapi.scripts.createfastq - INFO - Currently experiment:asdad
+2015-03-20 04:24:09,966 - apps.illuminaapi.scripts.createfastq - INFO - Currently experiment:asdad
+2015-03-20 04:24:09,966 - apps.illuminaapi.scripts.createfastq - INFO - asdad: Init Directory
+2015-03-20 04:24:09,966 - apps.illuminaapi.scripts.createfastq - INFO - asdad: Init Directory
+2015-03-20 04:24:09,967 - apps.illuminaapi.scripts.createfastq - ERROR - Exception in createRundir : unsupported operand type(s) for +: 'int' and 'str'
+Traceback (most recent call last):
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq.py", line 29, in run
+    operations.createRundir(data)
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq_operations.py", line 45, in createRundir
+    raise Exception("Exception in createRundir : %s" %e)
+Exception: Exception in createRundir : unsupported operand type(s) for +: 'int' and 'str'
+2015-03-20 04:24:09,967 - apps.illuminaapi.scripts.createfastq - ERROR - Exception in createRundir : unsupported operand type(s) for +: 'int' and 'str'
+Traceback (most recent call last):
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq.py", line 29, in run
+    operations.createRundir(data)
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq_operations.py", line 45, in createRundir
+    raise Exception("Exception in createRundir : %s" %e)
+Exception: Exception in createRundir : unsupported operand type(s) for +: 'int' and 'str'
+2015-03-20 04:28:49,066 - apps.illuminaapi.scripts.createfastq - INFO - Currently experiment:dasdad
+2015-03-20 04:28:49,067 - apps.illuminaapi.scripts.createfastq - INFO - dasdad: Init Directory
+2015-03-20 04:28:49,126 - apps.illuminaapi.scripts.createfastq - INFO - dasdad: Run bcl2fastq
+2015-03-20 04:28:49,297 - apps.illuminaapi.scripts.createfastq - ERROR - Exception in runExpirement : Exception in configureXML : 'unicode' object has no attribute 'keys'
+Traceback (most recent call last):
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq.py", line 34, in run
+    operations.runExpirement(data)
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq_operations.py", line 72, in runExpirement
+    raise Exception("Exception in runExpirement : %s" %e)
+Exception: Exception in runExpirement : Exception in configureXML : 'unicode' object has no attribute 'keys'
+2015-03-20 04:37:18,143 - apps.illuminaapi.scripts.createfastq - INFO - Currently experiment:sdssf
+2015-03-20 04:37:18,144 - apps.illuminaapi.scripts.createfastq - INFO - sdssf: Init Directory
+2015-03-20 04:37:18,215 - apps.illuminaapi.scripts.createfastq - INFO - sdssf: Run bcl2fastq
+2015-03-20 04:37:18,366 - apps.illuminaapi.scripts.createfastq - ERROR - Exception in runExpirement : Exception in configureXML : 'unicode' object has no attribute 'keys'
+Traceback (most recent call last):
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq.py", line 34, in run
+    operations.runExpirement(data)
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq_operations.py", line 72, in runExpirement
+    raise Exception("Exception in runExpirement : %s" %e)
+Exception: Exception in runExpirement : Exception in configureXML : 'unicode' object has no attribute 'keys'
+2015-03-20 04:38:37,051 - apps.illuminaapi.scripts.createfastq - INFO - Currently experiment:qeq
+2015-03-20 04:38:37,051 - apps.illuminaapi.scripts.createfastq - INFO - qeq: Init Directory
+2015-03-20 04:38:37,086 - apps.illuminaapi.scripts.createfastq - INFO - qeq: Run bcl2fastq
+2015-03-20 04:38:37,244 - apps.illuminaapi.scripts.createfastq - ERROR - Exception in runExpirement : Exception in configureXML : 'unicode' object has no attribute 'keys'
+Traceback (most recent call last):
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq.py", line 34, in run
+    operations.runExpirement(data)
+  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq_operations.py", line 72, in runExpirement
+    raise Exception("Exception in runExpirement : %s" %e)
+Exception: Exception in runExpirement : Exception in configureXML : 'unicode' object has no attribute 'keys'

@@ -34,6 +34,15 @@ class Analyze(models.Model):
 	def __unicode__(self):
 		return self.name
 
+class Job(models.Model):
+	analyze = models.ForeignKey('analyze',related_name='analyzes')
+	created = models.DateTimeField(auto_now_add=True)
+	status = models.CharField(max_length=200,default=get_status) #Runnig,#Finished,#Failed
+	description = models.CharField(max_length=200)
+
+	def __unicode__(self):
+		return self.name
+
 
 
 

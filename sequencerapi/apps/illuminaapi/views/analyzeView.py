@@ -1,5 +1,7 @@
 from rest_framework import generics
 from rest_framework import mixins
+from rest_framework import status
+from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import viewsets
 from apps.illuminaapi.models import Analyze, Illumina
@@ -12,8 +14,18 @@ class AnalyzeList(generics.ListCreateAPIView):
 	queryset = Analyze.objects.all()
 	serializer_class = AnalyzeSerializer
 
-	# def create(self,request,*args,*kwargs):
-	# 	data=request.DATA
+	def create(self,request,*args,**kwargs):
+		data = request.DATA
+		AnalyzeObject = AnalyzeSerializer(data=data,context={'request':request})
+		if AnalyzeObject.is_valid():
+			analyzeModel=AnalyzeObject.save()
+	 		data['analyze_id'] = str(analyzeModel.id)
+	 		data["illumina_name"] = "data2"
+	 		createfastq.run(data)
+	 		analyzeModel.status = "Finished"
+	 		analyzeModel.save()
+			return Response(AnalyzeObject.data,status=status.HTTP_201_CREATED)
+		return Response(AnalyzeObject.errors,status=status.HTTP_400_BAD_REQUEST)
 
 
 	def perform_create(self,serializer):
@@ -23,11 +35,11 @@ class AnalyzeList(generics.ListCreateAPIView):
 			serializer parameter is the deserialized Analyze
 			object based on the JSON self.request.data 
 		"""
-	 	data=self.request.data
+	 	data=self.request.data2
 	 #	illuminaName = Illumina.objects.get(id=data['illumina_id']).name
 	 	data["illumina_name"] = "data2"	 	
  		analyzeModel = serializer.save()
- 		data['analyze-id'] = analyzeModel.id
+ 		data['analyze_id'] = analyzeModel.id
  		createfastq.run(data)
  		analyzeModel.status = "Finished"
  		analyzeModel.save()
