@@ -2,7 +2,7 @@ from rest_framework import generics
 from rest_framework import mixins
 from rest_framework.views import APIView
 from rest_framework import viewsets
-from apps.illuminaapi.models import Analyze, Illumina, Run
+from apps.illuminaapi.models import Analyze, Illumina
 from apps.illuminaapi.serializers import AnalyzeSerializer
 from django.http import HttpResponse
 from apps.illuminaapi.scripts import createfastq
@@ -24,9 +24,10 @@ class AnalyzeList(generics.ListCreateAPIView):
 			object based on the JSON self.request.data 
 		"""
 	 	data=self.request.data
-	 	illuminaName = Illumina.objects.get(id=data['illumina_id']).name
+	 #	illuminaName = Illumina.objects.get(id=data['illumina_id']).name
 	 	data["illumina_name"] = "data2"	 	
  		analyzeModel = serializer.save()
+ 		data['analyze-id'] = analyzeModel.id
  		createfastq.run(data)
  		analyzeModel.status = "Finished"
  		analyzeModel.save()

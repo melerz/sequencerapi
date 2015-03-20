@@ -12,11 +12,11 @@ from django.conf import settings
 
 logger = logging.getLogger(__name__) #need to change that to __name__
 
-def createRundir(experiment,WEBSITE_PATH="/home/sheker/website/",BASE__ILLUMINA_PATH="/home/sheker/"):
+def createRundir(experiment,WEBSITE_PATH="/home/sheker/website/",BASE_ILLUMINA_PATH="/home/sheker/"):
 	try:
 		logger.debug("start createRundir: {0}".format(experiment))
 		#Creating dir_name if not exists
-		dir_name = experiment['run_id']+"-"+experiment['name']
+		dir_name = experiment['analyze_id']+"-"+experiment['name']
 		if not (os.path.isdir(dir_name)):
 			os.mkdir(dir_name)
 		#enter into dir.
@@ -29,7 +29,7 @@ def createRundir(experiment,WEBSITE_PATH="/home/sheker/website/",BASE__ILLUMINA_
 			os.mkdir(output_folder)
 
 
-		destination_path=BASE__ILLUMINA_PATH + experiment['illumina_name']
+		destination_path=BASE_ILLUMINA_PATH + experiment['illumina_name']
 
 		#check for destination_path trailing slash
 		if destination_path[-1:] == "/":
