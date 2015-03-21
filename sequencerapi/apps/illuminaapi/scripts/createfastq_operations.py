@@ -8,6 +8,7 @@ import json
 import shutil
 import logging
 import time
+import stat
 from django.conf import settings
 
 logger = logging.getLogger(__name__) #need to change that to __name__
@@ -24,10 +25,12 @@ def createRundir(experiment):
 		os.chdir(dir_name)
 
 		#create output folder in the WEBSITE_PATH global variable
-		output_folder = settings.WEBSITE_PATH+experiment['job_id']+str(datetime.date.today())+"-%s" % dir_name
+		output_folder = settings.WEBSITE_PATH+experiment['job_id']+"-"+str(datetime.date.today())+"-%s" % dir_name
 		if not (os.path.isdir(output_folder)):
 			os.mkdir(output_folder)
-
+			os.chmod(output_folder,stat.S_IXOTH)
+			htaccess_file = open(output_folder+'/.htaccess',"w+")
+			htaccess_file.write("Options +Indexes")
 
 		destination_path=settings.BASE_ILLUMINA_PATH + experiment['illumina_name']
 
