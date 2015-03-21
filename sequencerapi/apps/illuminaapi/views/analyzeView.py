@@ -48,7 +48,7 @@ class AnalyzeList(generics.ListCreateAPIView):
 	 	return jobObject.id
 
 	def build_output_folder_name(self,jobID,analyze_name):
-		suffix=jobID+"-"+analyze_name
+		suffix=str(jobID)+"-"+analyze_name
 		full_name = str(datetime.date.today())+"-%s" %suffix 
 		return full_name
 
