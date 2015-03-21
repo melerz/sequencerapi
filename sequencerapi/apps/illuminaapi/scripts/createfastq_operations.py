@@ -12,7 +12,7 @@ from django.conf import settings
 
 logger = logging.getLogger(__name__) #need to change that to __name__
 
-def createRundir(experiment,WEBSITE_PATH="/home/sheker/website/",BASE_ILLUMINA_PATH="/home/sheker/"):
+def createRundir(experiment):
 	try:
 		logger.debug("start createRundir: {0}".format(experiment))
 		#Creating dir_name if not exists
@@ -24,12 +24,12 @@ def createRundir(experiment,WEBSITE_PATH="/home/sheker/website/",BASE_ILLUMINA_P
 		os.chdir(dir_name)
 
 		#create output folder in the WEBSITE_PATH global variable
-		output_folder = WEBSITE_PATH+str(datetime.date.today())+"-%s" % dir_name
+		output_folder = settings.WEBSITE_PATH+str(datetime.date.today())+"-%s" % dir_name
 		if not (os.path.isdir(output_folder)):
 			os.mkdir(output_folder)
 
 
-		destination_path=BASE_ILLUMINA_PATH + experiment['illumina_name']
+		destination_path=settings.BASE_ILLUMINA_PATH + experiment['illumina_name']
 
 		#check for destination_path trailing slash
 		if destination_path[-1:] == "/":
@@ -63,8 +63,8 @@ def runExpirement(experiment_data,xml_path="./RunInfo.xml"):
 		createSampleSheet(experiment_data['csv'],"./SampleSheet.csv")
 
 		#run the bcl2fastq
-		#p = subprocess.Popen("/usr/local/bcl2fastq/2.15.0.4/bin/bcl2fastq -o fastq -p 8 -d 6 -r 4 -w 4")
-		time.sleep(30)
+		#p = subprocess.Popen(["/usr/local/bcl2fastq/2.15.0.4/bin/bcl2fastq","-o","fastq","-p","8","-d","6","-r","4","-w","4"])
+		time.sleep(10)
 		#create download link - mayb we don't need that!
 
 		logger.debug("End runExpirement successfully")

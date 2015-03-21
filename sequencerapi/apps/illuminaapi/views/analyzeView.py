@@ -37,7 +37,8 @@ class AnalyzeList(generics.ListCreateAPIView):
 		data = request.DATA
 		data['job_id'] = str(jobObject.id)
 	 	data['illumina_name'] = "data2"
-	 	task=fastq_async.delay(data) #run with celery
+	 	#task=fastq_async.delay(data) #run with celery
+	 	createfasq.run(data)
 	 	return jobObject.id
 
 class AnalyzeDetail(generics.RetrieveUpdateDestroyAPIView):

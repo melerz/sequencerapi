@@ -87,13 +87,15 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-
-# FILE UPLOAD
-MEDIA_ROOT='/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/uploads/'
-#
-
-#HOSTNAME
-HOSTNAME="132.65.120.206"
+#CUSTOM CONFIGURATION
+#HOSTNAME="132.65.120.206"
+MEDIA_ROOT='/cs/wetlab/sequencer-cli/src/uploads/'
+BASE_API="http://132.65.120.148:8080/illuminaapi"
+BASE_ILLUMINA_PATH:"/cs/nextseq/"
+WEBSITE_PATH:""
+ILLUMINA_ENDPINT=BASE_API+"/illumina/"
+ANALYZE_ENDPINT=BASE_API+"/analyze/"
+JOB_ENDPINT=BASE_API+"/job/"
 
 
 #CELERY SETTINGS
