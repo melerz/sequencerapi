@@ -33,7 +33,7 @@ def run(data,log_level="INFO",log_file="./fastq-log.log"):
 		#Output folder is fastq, created by createRundir
 		operations.runExpirement(data)
 
-		update_data(settings.JOB_ENDPOINT+"/%s/"%data['job_id'],
+		update_data(settings.JOB_ENDPOINT+"%s/"%data['job_id'],
 				{'description':'finished to generate fastq'})
 		#Changing back to the main folder
 
@@ -43,7 +43,7 @@ def run(data,log_level="INFO",log_file="./fastq-log.log"):
 
 	except Exception as e:
 		logger.exception(e)
-		update_data(settings.JOB_ENDPOINT+"/%s/"%data['job_id'],
+		update_data(settings.JOB_ENDPOINT+"%s/"%data['job_id'],
 			{'description':'%s'%e})
 		print "main exception. See log file for further details:%s"%e
 		exc_type,exc_obj,exc_tb = sys.exc_info()
