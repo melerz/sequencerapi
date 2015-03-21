@@ -3,7 +3,7 @@ import os
 import createfastq_operations as operations
 import sys
 import requests
-import settings
+from django.conf import settings
 def run(data,log_level="INFO",log_file="./fastq-log.log"):
 	'''
 		For each expierment in the data, create a folder with the expirement name, and init it by
