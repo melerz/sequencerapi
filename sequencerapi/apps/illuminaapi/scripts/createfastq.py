@@ -34,7 +34,7 @@ def run(data,log_level="INFO",log_file="./fastq-log.log"):
 		operations.runExpirement(data)
 
 		update_data(settings.JOB_ENDPOINT+"%s/"%data['job_id'],
-				{'description':'finished to generate fastq'})
+				{'status':'Finished','description':'Succefully Finished to generate fastq'})
 		#Changing back to the main folder
 
 		os.chdir(currentLocation)
