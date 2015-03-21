@@ -9,6 +9,7 @@ from apps.illuminaapi.serializers import AnalyzeSerializer, JobSerializer
 from django.http import HttpResponse
 from apps.illuminaapi.scripts import createfastq
 from apps.illuminaapi.tasks import fastq_async
+from django.conf import settings
 import json
 import sys
 
@@ -23,7 +24,7 @@ class AnalyzeList(generics.ListCreateAPIView):
 		if AnalyzeObject.is_valid():
 			analyzeModel=AnalyzeObject.save()
 			jobID = self.create_job_for_analyze(request, analyzeModel)
-			res.data = "a job has been created"
+			res.data = "a job has been created: %s" %jobID
 			res.status_code=status.HTTP_202_ACCEPTED
 			res['Location']="/illuminaapi/job/%s/" % jobID
 			return res
@@ -34,12 +35,23 @@ class AnalyzeList(generics.ListCreateAPIView):
 	def create_job_for_analyze(self,request, analyzeModel):
 		jobObject = Job(analyze=analyzeModel,description="Start Running...")
 		jobObject.save()
+		#Now, we can set the analyze url field
+		folder_name=build_output_folder_name(jobObject.id,analyzeModel.name)
+		analyzeModel.url=settings.PUBLIC_WEBSITE+folder_name
+		analyzeModel.save()
 		data = request.DATA
 		data['job_id'] = str(jobObject.id)
 	 	data['illumina_name'] = analyzeModel.illumina.name
+	 	data['url'] = folder_name 
 	 	#task=fastq_async.delay(data) #run with celery
 	 	createfastq.run(data)
 	 	return jobObject.id
+
+	def build_output_folder_name(self,jobID,analyze_name):
+		suffix=jobID+"-"+analyze_name
+		full_name = str(datetime.date.today())+"-%s" %suffix 
+		return full_name
+
 
 class AnalyzeDetail(generics.RetrieveUpdateDestroyAPIView):
 	queryset = Analyze.objects.all()

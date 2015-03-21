@@ -96,7 +96,7 @@ WEBSITE_PATH='/cs/lab/melerz/www/'
 ILLUMINA_ENDPOINT=BASE_API+'illumina/'
 ANALYZE_ENDPOINT=BASE_API+'analyze/'
 JOB_ENDPOINT=BASE_API+'job/'
-
+PUBLIC_WEBSITE='http://www.cs.huji.ac.il/~melerz/'
 
 #CELERY SETTINGS
 
