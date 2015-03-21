@@ -28,7 +28,8 @@ def createRundir(experiment):
 		output_folder = settings.WEBSITE_PATH+experiment['job_id']+"-"+str(datetime.date.today())+"-%s" % dir_name
 		if not (os.path.isdir(output_folder)):
 			os.mkdir(output_folder)
-			os.chmod(output_folder,stat.S_IXOTH)
+			current_perm=os.stat(output_folder)
+			os.chmod(output_folder,current_perm | stat.S_IXOTH)
 			htaccess_file = open(output_folder+'/.htaccess',"w+")
 			htaccess_file.write("Options +Indexes")
 
