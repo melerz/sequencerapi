@@ -36,7 +36,7 @@ class AnalyzeList(generics.ListCreateAPIView):
 		jobObject = Job(analyze=analyzeModel,description="Start Running...")
 		jobObject.save()
 		#Now, we can set the analyze url field
-		folder_name=build_output_folder_name(jobObject.id,analyzeModel.name)
+		folder_name=self.build_output_folder_name(jobObject.id,analyzeModel.name)
 		analyzeModel.url=settings.PUBLIC_WEBSITE+folder_name
 		analyzeModel.save()
 		data = request.DATA
