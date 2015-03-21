@@ -93,9 +93,9 @@ MEDIA_ROOT='/cs/wetlab/sequencerapi/sequencerapi/apps/illuminaapi/uploads/'
 BASE_API='http://132.65.52.11:8080/illuminaapi'
 BASE_ILLUMINA_PATH='/cs/nextseq/'
 WEBSITE_PATH=''
-ILLUMINA_ENDPINT=BASE_API+'/illumina/'
-ANALYZE_ENDPINT=BASE_API+'/analyze/'
-JOB_ENDPINT=BASE_API+'/job/'
+ILLUMINA_ENDPOINT=BASE_API+'/illumina/'
+ANALYZE_ENDPOINT=BASE_API+'/analyze/'
+JOB_ENDPOINT=BASE_API+'/job/'
 
 
 #CELERY SETTINGS

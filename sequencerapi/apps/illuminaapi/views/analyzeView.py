@@ -36,7 +36,7 @@ class AnalyzeList(generics.ListCreateAPIView):
 		jobObject.save()
 		data = request.DATA
 		data['job_id'] = str(jobObject.id)
-	 	data['illumina_name'] = "data2"
+	 	#data['illumina_name'] = "data2"
 	 	#task=fastq_async.delay(data) #run with celery
 	 	createfastq.run(data)
 	 	return jobObject.id
