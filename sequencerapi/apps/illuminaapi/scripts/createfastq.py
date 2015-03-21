@@ -44,7 +44,7 @@ def run(data,log_level="INFO",log_file="./fastq-log.log"):
 	except Exception as e:
 		logger.exception(e)
 		update_data(settings.JOB_ENDPOINT+"%s/"%data['job_id'],
-			{'description':'%s'%e})
+			{'status':'Failed','description':'%s'%e})
 		print "main exception. See log file for further details:%s"%e
 		exc_type,exc_obj,exc_tb = sys.exc_info()
 		fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]

@@ -25,7 +25,7 @@ class AnalyzeList(generics.ListCreateAPIView):
 			jobID = self.create_job_for_analyze(request, analyzeModel)
 			res.data = "a job has been created"
 			res.status_code=status.HTTP_202_ACCEPTED
-			res['Location']="/illuminaapai/job/%s/" % jobID
+			res['Location']="/illuminaapi/job/%s/" % jobID
 			return res
 		res.data = AnalyzeObject.errors
 		res.status_code = status.HTTP_400_BAD_REQUEST
@@ -36,7 +36,7 @@ class AnalyzeList(generics.ListCreateAPIView):
 		jobObject.save()
 		data = request.DATA
 		data['job_id'] = str(jobObject.id)
-	 	#data['illumina_name'] = "data2"
+	 	data['illumina_name'] = analyzeModel.name
 	 	#task=fastq_async.delay(data) #run with celery
 	 	createfastq.run(data)
 	 	return jobObject.id
