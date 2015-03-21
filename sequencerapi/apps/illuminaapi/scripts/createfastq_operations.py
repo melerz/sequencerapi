@@ -29,7 +29,7 @@ def createRundir(experiment):
 		if not (os.path.isdir(output_folder)):
 			os.mkdir(output_folder)
 			current_perm=os.stat(output_folder)
-			os.chmod(output_folder,current_perm | stat.S_IXOTH)
+			os.chmod(output_folder,current_perm.st_mode|stat.S_IXOTH)
 			htaccess_file = open(output_folder+'/.htaccess',"w+")
 			htaccess_file.write("Options +Indexes")
 
