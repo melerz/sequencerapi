@@ -10,6 +10,8 @@ from django.http import HttpResponse
 from apps.illuminaapi.scripts import createfastq
 from apps.illuminaapi.tasks import fastq_async
 from django.conf import settings
+
+import datetime
 import json
 import sys
 
