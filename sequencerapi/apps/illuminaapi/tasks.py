@@ -3,7 +3,7 @@ from celery import shared_task
 from apps.illuminaapi.scripts import createfastq
 import hashlib
 import time
-import redis
+#import redis
 
 LOCK_EXPIRE = 60*60*6 #6 Hours
 @shared_task
