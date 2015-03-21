@@ -87,7 +87,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-#CUSTOM CONFIGURATION
+#CUSTOM PROJECT CONFIGURATION
 #HOSTNAME="132.65.120.206"
 MEDIA_ROOT='/cs/wetlab/sequencer-cli/src/uploads/'
 BASE_API="http://132.65.120.148:8080/illuminaapi"
