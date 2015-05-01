@@ -6,7 +6,7 @@ def feed(path="/home/sheker/",post_url="http://132.65.120.148:8080/illuminaapi/i
 	for illumina_dir in os.listdir(path):
 		data={}
 		raw_createdtime = os.path.getctime(os.path.join(path,illumina_dir))
-		illumina_date = datetime.datetime.fromtimestamp(raw_createdtime).strftime('%Y-%M-%d')
+		illumina_date = datetime.datetime.fromtimestamp(raw_createdtime).strftime('%Y-%m-%d')
 		
 		data["name"] = illumina_dir
 		data["date"] = illumina_date
