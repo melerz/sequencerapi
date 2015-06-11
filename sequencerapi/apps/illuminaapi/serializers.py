@@ -2,12 +2,6 @@ from rest_framework import serializers
 from apps.illuminaapi.models import Illumina,Analyze,Job
 
 
-# class RunSerializer(serializers.HyperlinkedModelSerializer):
-# 	analyzes = serializers.HyperlinkedRelatedField(many=True,read_only=True,view_name='analyze-detail')
-# 	class Meta:
-# 		model = Run
-# 		fields = ('id','name','illumina','date','isFinished','analyzes')
-
 class IlluminaSerializer(serializers.ModelSerializer):
 	analyzes = serializers.HyperlinkedRelatedField(many=True,read_only=True,view_name='analyze-detail')
 	class Meta:
@@ -19,7 +13,7 @@ class AnalyzeSerializer(serializers.HyperlinkedModelSerializer):
 	job = serializers.HyperlinkedRelatedField(many=True,read_only=True,view_name='job-detail')
 	class Meta:
 		model = Analyze
-		fields = ('id','name','illumina','created','csv','configuration','url','status','job')
+		fields = ('name','illumina','created','csv','url','status','job')
 
 
 class JobSerializer(serializers.HyperlinkedModelSerializer):

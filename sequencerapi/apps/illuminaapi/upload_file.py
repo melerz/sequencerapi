@@ -4,16 +4,18 @@ import json
 import subprocess
 import os
 
-def handle_upload_file(f):
+def handle_upload_file(experiment_name,f):
 	try:
-
-		if(f.content_type == 'application/vnd.ms-excel'):
-
+		path = None
+		if(f.content_type in ['application/vnd.ms-excel','text/csv','text/plain']):
 			#file is UploadedFile object
+			experiment_upload_dir = os.path.join(ssettings.MEDIA_ROOT,experiment_name)
+			if not os.path.isdir(experiment_upload_dir):
+				os.mkdir(experiment_upload_dir)
 			default_storage.save(f.name, f)
 			path = os.path.join(settings.MEDIA_ROOT,f.name)
 			res = []
-			configuration = extractCsv_information(path)	
+			configuration = extractCsv_information(path)
 			result = {}
 			result['name']=f.name
 			result['type'] = f.content_type
@@ -23,11 +25,9 @@ def handle_upload_file(f):
 			res.append(result)
 			return res
 		else:
-			raise Exception("Uploaded file is not a csv file") 
-	except Exception as e:
-			if(path):
-				default_storage.delete(path)
-			return {"error":"%s" %e.message}
+			raise Exception("Uploaded file is not a csv file, but: %s" % f.content_type)
+		except Exception, e:
+			raise Exception(e.message)
 
 def extractCsv_information(path):
 	try:

@@ -1,9 +1,0 @@
-2015-03-19 06:13:59,681 - fastq10 - INFO - Currently experiment:sddsad
-2015-03-19 06:13:59,682 - fastq10 - INFO - sddsad: Init Directory
-2015-03-19 06:13:59,683 - fastq10 - ERROR - Exception in createRundir : 'illumina_name'
-Traceback (most recent call last):
-  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq.py", line 29, in run
-    operations.createRundir(data)
-  File "/home/sheker/sequencerapi/src/sequencerapi/apps/illuminaapi/scripts/createfastq_operations.py", line 40, in createRundir
-    raise Exception("Exception in createRundir : %s" %e)
-Exception: Exception in createRundir : 'illumina_name'

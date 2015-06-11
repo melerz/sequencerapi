@@ -1,19 +1,15 @@
 from django.db import models
-from jsonfield import JSONField
+from django.conf import settings
 # Create your models here.
 
 def get_status():
 	return "running"
 
-# class Run(models.Model):
-# 	name = models.CharField(max_length=100)
-# 	illumina = models.ForeignKey('Illumina',related_name='runs')
-# 	date = models.DateTimeField(auto_now_add=True)
-# 	isFinished = models.BooleanField(default=False)
 
-# 	def __unicode__(self):
-# 		return self.name
-
+def get_upload_path(instance,filename):
+	#neeed to remove SampleSheet.csv if it's already exist
+	return "%s/%s"%(instance.name,"SampleSheet.csv")
+		
 class Illumina(models.Model):
 	name = models.CharField(primary_key=True,max_length=100)
 	date = models.DateField()
@@ -22,17 +18,25 @@ class Illumina(models.Model):
 		return self.name
 
 class Analyze(models.Model):
-	name   = models.CharField(max_length=100)
+	name   = models.CharField(primary_key=True,max_length=100)
 	illumina = models.ForeignKey('Illumina',related_name='analyzes')
 	created = models.DateTimeField(auto_now_add=True)
-	csv = models.CharField(max_length=200)
 	url = models.CharField(max_length=200,blank=True)
 	status = models.CharField(max_length=200,default=get_status)
-	#csv_file = models.FileField(upload_to='files/%Y/%m/%d') #someday
-	configuration = JSONField(blank=True)
+	csv = models.FileField(upload_to=get_upload_path) #someday
+	workflow   = models.CharField(max_length=100)
 
 	def __unicode__(self):
 		return self.name
+
+
+
+# class Workflow(models.Model):
+# 	name   = models.CharField(primary_key=True,max_length=100)
+
+# class Method(models.Model):
+# 	name = models.CharField(primary_key=True,max_length=100)
+# 	workflow = models.ForeignKey('Workflow',related_names='methods')
 
 class Job(models.Model):
 	analyze = models.ForeignKey('analyze',unique=True,related_name='job')
