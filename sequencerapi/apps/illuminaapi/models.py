@@ -8,8 +8,9 @@ def get_status():
 
 def get_upload_path(instance,filename):
 	#neeed to remove SampleSheet.csv if it's already exist
+	print filename,instance
 	return "%s/%s"%(instance.name,"SampleSheet.csv")
-		
+
 class Illumina(models.Model):
 	name = models.CharField(primary_key=True,max_length=100)
 	date = models.DateField()
@@ -23,7 +24,7 @@ class Analyze(models.Model):
 	created = models.DateTimeField(auto_now_add=True)
 	url = models.CharField(max_length=200,blank=True)
 	status = models.CharField(max_length=200,default=get_status)
-	csv = models.FileField(upload_to=get_upload_path) #someday
+	csv = models.FileField(upload_to=get_upload_path,blank=True) #someday
 	workflow   = models.CharField(max_length=100)
 
 	def __unicode__(self):

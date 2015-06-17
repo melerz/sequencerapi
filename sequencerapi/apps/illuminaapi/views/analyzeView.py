@@ -6,17 +6,22 @@ from apps.illuminaapi.models import Analyze, Illumina, Job
 from apps.illuminaapi.serializers import AnalyzeSerializer, JobSerializer
 from apps.illuminaapi.scripts import createfastq
 from apps.illuminaapi.tasks import fastq_async
+from rest_framework.parsers import JSONParser, MultiPartParser, FormParser
+from django.core.files.storage import default_storage
+import os
 import json
 import sys
 
 class AnalyzeViewSet(viewsets.ModelViewSet):
 	queryset = Analyze.objects.all()
 	serializer_class = AnalyzeSerializer
-
+	parser_classes = (MultiPartParser, FormParser)
 	def create(self,request):
 		try:
 			res=Response()
 			data=request.DATA
+			print request.DATA
+			print request.FILES
 			experiment_name = data['name']
 			#/uploads(MEDIA_ROOT)/experiment_name/filename.csv / SampleSheet.csv
 			experiment_dir_path = settings.MEDIA_ROOT+experiment_name
@@ -26,6 +31,9 @@ class AnalyzeViewSet(viewsets.ModelViewSet):
 			AnalyzeObject = AnalyzeSerializer(data=data,context={'request':request})
 	 		if AnalyzeObject.is_valid():
 	 			analyzeModel=AnalyzeObject.save()
+	 			file_obj = request.FILES['csv']
+	 			analyzeModel.csv = file_obj
+	 			analyzeModel.save()
 	 			jobID = self.create_job_for_analyze(request, analyzeModel)
 	 			res.data = "a job has been created"
 	 			res.status_code=status.HTTP_202_ACCEPTED
