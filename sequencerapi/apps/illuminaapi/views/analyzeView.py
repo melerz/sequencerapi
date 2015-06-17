@@ -31,9 +31,9 @@ class AnalyzeViewSet(viewsets.ModelViewSet):
 			AnalyzeObject = AnalyzeSerializer(data=data,context={'request':request})
 	 		if AnalyzeObject.is_valid():
 	 			analyzeModel=AnalyzeObject.save()
-	 			file_obj = request.FILES['csv']
-	 			analyzeModel.csv = file_obj
-	 			analyzeModel.save()
+	 			# file_obj = request.FILES['csv']
+	 			# analyzeModel.csv = file_obj
+	 			# analyzeModel.save()
 	 			jobID = self.create_job_for_analyze(request, analyzeModel)
 	 			res.data = "a job has been created"
 	 			res.status_code=status.HTTP_202_ACCEPTED
