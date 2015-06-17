@@ -9,6 +9,7 @@ def get_status():
 def get_upload_path(instance,filename):
 	#neeed to remove SampleSheet.csv if it's already exist
 	print filename,instance
+	print type(filename)
 	return "%s/%s"%(instance.name,"SampleSheet.csv")
 
 class Illumina(models.Model):

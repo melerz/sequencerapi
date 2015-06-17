@@ -8,42 +8,51 @@ from apps.illuminaapi.scripts import createfastq
 #from apps.illuminaapi.tasks import fastq_async
 from rest_framework.parsers import JSONParser, MultiPartParser, FormParser
 from django.core.files.storage import default_storage
+from django.core.files.base import ContentFile
 import os
 import json
 import sys
+import magic
 
 class AnalyzeViewSet(viewsets.ModelViewSet):
 	queryset = Analyze.objects.all()
 	serializer_class = AnalyzeSerializer
-	parser_classes = (MultiPartParser, FormParser)
+	parser_classes = (JSONParser,MultiPartParser, FormParser)
 	def create(self,request):
 		try:
 			res=Response()
 			data=request.DATA
-			print request.DATA
-			print request.FILES
 			experiment_name = data['name']
-			#/uploads(MEDIA_ROOT)/experiment_name/filename.csv / SampleSheet.csv
-			experiment_dir_path = settings.MEDIA_ROOT+experiment_name
-			if not os.path.isdir(experiment_dir_path):
-				os.mkdir(experiment_dir_path)
+			#If file is bein uploaded with form-data, the 'csv' field is not popluated with null!
+			#We need to add the csv field to the data from the request and than add to the model the file.
 
+			#Adding a csv field
+			data['csv'] = None
 			AnalyzeObject = AnalyzeSerializer(data=data,context={'request':request})
 	 		if AnalyzeObject.is_valid():
-	 			analyzeModel=AnalyzeObject.save()
-	 			# file_obj = request.FILES['csv']
-	 			# analyzeModel.csv = file_obj
-	 			# analyzeModel.save()
+	 			file_obj = request.FILES['csv']
+	 			mime = magic.Magic(mime=True)
+	 			if not (mime.from_buffer(file_obj.read()) in ['application/vnd.ms-excel','text/csv','text/plain']):
+	 				raise Exception("Uploaded file should be a csv format")
+	 			analyzeModel=AnalyzeObject.save(csv=file_obj)
 	 			jobID = self.create_job_for_analyze(request, analyzeModel)
 	 			res.data = "a job has been created"
 	 			res.status_code=status.HTTP_202_ACCEPTED
 	 			res['Location']="/illuminaapai/job/%s/" % jobID
 	 			return res
+	 		print "errors after not valid: %s" %(AnalyzeObject.errors)
 	 		raise Exception(AnalyzeObject.errors)
 		except Exception,e:
-			res.data="An error has been occured while creating new analyze: %s"%e.message
-	 		res.status_code = status.HTTP_400_BAD_REQUEST
-			return res
+			#delete the model if created
+			try:
+				current_experiment = Analyze.objects.get(name=experiment_name)
+				current_experiment.delete()
+			except:
+				pass
+			finally:
+				res.data="An error has been occured while creating new analyze: %s"%e.message
+		 		res.status_code = status.HTTP_400_BAD_REQUEST
+				return res
 
 	def create_job_for_analyze(self,request, analyzeModel):
 		jobObject = Job(analyze=analyzeModel,description="Start Running...")
