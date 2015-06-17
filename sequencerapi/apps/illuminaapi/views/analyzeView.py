@@ -5,7 +5,7 @@ from rest_framework import viewsets
 from apps.illuminaapi.models import Analyze, Illumina, Job
 from apps.illuminaapi.serializers import AnalyzeSerializer, JobSerializer
 from apps.illuminaapi.scripts import createfastq
-from apps.illuminaapi.tasks import fastq_async
+#from apps.illuminaapi.tasks import fastq_async
 from rest_framework.parsers import JSONParser, MultiPartParser, FormParser
 from django.core.files.storage import default_storage
 import os
